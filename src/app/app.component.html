@@ -1,0 +1,6 @@
+<app-header></app-header>
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>
+<app-footer *ngIf="!pageNotFound()"></app-footer>
+<app-svg *ngIf="showScrollUp()" [svgReference]="'caretUp'" (click)="scrollUp()" [width]="24" [color]="'cl-style-detail-md'" class="scroll-top-icon flex center pointer"></app-svg>

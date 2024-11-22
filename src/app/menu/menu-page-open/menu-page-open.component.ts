@@ -1,0 +1,91 @@
+import { Component } from '@angular/core';
+import {Router} from "@angular/router";
+import {Meta, Title} from "@angular/platform-browser";
+
+@Component({
+  selector: 'app-menu-page-open',
+  templateUrl: './menu-page-open.component.html',
+  styleUrls: ['./menu-page-open.component.scss']
+})
+export class MenuPageOpenComponent {
+
+    public menuList: object[] = []
+    public urlRefer: string = ''
+    public description: string = ''
+
+    private menuListAll: object[] = [
+        {costumers: 1, category: 'sobremesas', delivery: true, photoUrl: 'assets/img/cardapio/sobremesa-marquise-chocolat.avif', title: 'Marquise au Chocolat', description:'Um delicioso mousse de chocolate belga, aromatizado com café, cobertura de calda de cacau com mini trufas de chocolate.'},
+        {costumers: 1, category: 'sobremesas', delivery: true, photoUrl: 'assets/img/cardapio/sobremesa-cheesecake.avif', title: 'Cheesecake', description:'Uma cheesecake com caldas de frutas vermelhas. À base de biscoito, recheada com creme de queijo e saborizada com limão.'},
+        {costumers: 1, category: 'sobremesas', delivery: true, photoUrl: 'assets/img/cardapio/sobremesa-creme-caramel.avif', title: 'Creme Caramel', description:'O clássico e inconfundível pudim de leite condensado que derrete na boca.'},
+        {costumers: 1, category: 'sobremesas', delivery: true, photoUrl: 'assets/img/cardapio/sobremesa-menu-degustacao.avif', title: 'Menu degustação de Sobremesas', description:'São três deliciosas sobremesas: Marquise au Chocolat - Um delicioso mousse de chocolate belga, aromatizado com café, cobertura de calda de cacau com mini trufas de chocolate. Creme Caramel - Pudim de leite condensado que derrete na boca. Cheesecake - Uma cheesecake com caldas de frutas vermelhas. À base de biscoito, recheada com creme de queijo e saborizada com limão.'},
+        {costumers: 1, category: 'sobremesas', photoUrl: 'assets/img/cardapio/sobremesa-milles-feuilles-eiffel.avif', title: 'Mille Feuilles Eiffel', description:'Camadas de massa folhada, intercaladas com recheio de doce de leite e creme patissier de doce de leite, decorada com a torre Eiffel, feita com açúcar e cacau'},
+        {costumers: 1, category: 'sobremesas', photoUrl: 'assets/img/cardapio/sobremesa-creme-brulee.avif', title: 'Crème Brûlée', description:'Creme com fava de baunilha, coberto por uma camada de açúcar caramelizado e finalizado com confit de laranja.'},
+
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Branco Moscato 200 ml', description:'Uma Taça de vinho da casa servida em uma elegante garrafinha de 200 ml.'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Tinto - Cabernet Sauvignon 200 ml', description:'Uma Taça de vinho da casa servida em uma elegante garrafinha de 200 ml.'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Rosé - rosé 200 ml', description:'Uma Taça de vinho da casa servida em uma elegante garrafinha de 200 ml.'},
+
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Água Crystal - 500 Ml', description:'Água Crystal - 500 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Água Crystal com Gás - 500 Ml', description:'Água Crystal com Gás - 500 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Coca-Cola Lata - 350 Ml', description:'Coca-Cola Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Coca-Cola sem Açúcar Lata - 350 Ml', description:'Coca-Cola sem Açúcar Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Fanta Guaraná Lata - 350 Ml', description:'Fanta Guaraná Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Fanta Laranja Lata - 350 Ml', description:'Fanta Laranja Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Fanta Uva Lata - 350ml', description:'Fanta Uva Lata - 350ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Heineken - 330 Ml', description:'Heineken - 330 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Schweppes Citrus 350ml', description:'Schweppes Citrus 350ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Sprite Lata - 350 Ml', description:'Sprite Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Sprite sem Açúcar Lata - 350 Ml', description:'Sprite sem Açúcar Lata - 350 Ml'},
+        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Sprite Lemon Fresh', description:'Sprite Lemon Fresh'},
+
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-burrata-bufula.avif', title: 'Burrata de Búfula', description: 'Burrata de búfula artesanal servida sobre uma cama de tomates cereja assados acompanhada de torradas e molho pesto.'},
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-burrata-salad.avif', title: 'Burrata Salad - Salada de Burrata', description: 'Mix de folhas verdes, burrata com molho pesto, tomate confit e molho de iogurte (80 ml).'},
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-queijo-brie-gratin.avif', title: 'Queijo Brie Gratin', description: 'Queijo Brie Gratinado redondo grande gratinado no rechaud com geleia caseira de damasco, mel e nozes. Acompanha torrada.'},
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-quinoa-salad.avif', title: 'Quinoa Salad - Salada de Quinoa', description: 'Mix de folhas verdes, quinoa temperada, tomate cereja, nozes, damasco e molho de mostarda e mel (30ml).'},
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-salada-classica.avif', title: 'Salada Clássica', description: 'Salada clássica composta de mix de folhas verdes, tomates cerejas, nozes, molho à base de iogurte para salada (80 ml).'},
+        {category: 'entradas', delivery: true, photoUrl: 'assets/img/cardapio/entrada-steak-tartare.avif', title: 'Steak Tartare', description: 'Entrecôte picado na ponta da faca, temperado com vegetais frescos com toque especial da nossa maionese de mostarda Dijon feita na casa. Servido na companhia de torradas crocantes.'},
+
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-executive.avif', title: 'Executive: Steak de Carne com Batatas Fritas e Molho Secreto', description:'150 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com batatas fritas e acompanhadas do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) Steak de Carne 150 gramas de proteína in natura (crua). Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-classique.avif', title: 'Classique: Steak de Carne com Batatas Fritas e Molho Secreto', description:'180 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com batatas fritas e acompanhadas do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) Steak de Carne 180 gramas de proteína in natura (crua) Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-exclusif.avif', title: 'Exclusif: Steak de Carne com Batatas Fritas e Molho Secreto', description:'220 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com batatas fritas e acompanhadas do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) Steak de Carne 220 gramas de proteína in natura (crua) Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-executive-salad.avif', title: 'Executive Salad: Steak de Carne com Salada e Molho Secreto', description:'150 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com a salada clássica (mix de folhas verdes, tomates cerejas, nozes) e o nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Steak de Carne 150 gramas de proteína in natura (crua) Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-classique-salad.avif', title: 'Classique Salad: Steak de Carne com Salada e Molho Secreto', description:'180 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com a salada clássica (mix de folhas verdes, tomates cerejas, nozes) e o nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Steak de Carne 180 gramas de proteína in natura (crua) Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-exclusif-salad.avif', title: 'Exclusif Salad: Steak de Carne com Salada e Molho Secreto', description:'220 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com a salada clássica (mix de folhas verdes, tomates cerejas, nozes) e o nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Steak de Carne 220 gramas de proteína in natura (crua) Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/steak-baguette.avif', title: 'Steak Baguette', description:'Steak Baguette é uma opção deliciosa e satisfatória para quem busca um lanche ou refeição rápida. Ele é composto por um suculento steak de carne bovina, com 110 gramas de proteína, recheado com batatas fritas crocantes. O prato é acompanhado do nosso delicioso molho secreto, com 80ml de sabor intenso e irresistível. O Steak Baguette é apresentado na versão baguette que é crocante por fora e macia por dentro. - Relação Peso in natura x peso grelhado Steak de Carne 110 gramas de proteína in natura (crua). Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 2, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-double.avif', title: 'Double: Steak de Carne com Batatas Fritas e Molho Secreto', description:'Compartilhar com 2 pessoas. Um suculento corte de carne nobre com 300 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com duas porções de batatas fritas e acompanhadas com duas unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) cada porção. São duas porções de batatas. São dois Steaks de Carnes com 150 gramas in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 3, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-pour-trois.avif', title: 'Pour Trois: Steak de Carne com Batatas Fritas e Molho Secreto', description:'Compartilhar com 3 pessoas. Um suculento corte de carne nobre com 450 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com três porções de batatas fritas e acompanhadas com três unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) cada porção. São três porções de batatas. São três Steaks de Carnes com 150 gramas in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 4, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-familie.avif', title: 'Famille: Steak de Carne com Batatas Fritas e Molho Secreto', description:'Compartilhar com 4 pessoas. Um suculento corte de carne nobre com 600 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com quatro porções de batatas fritas e acompanhadas com quatro unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) cada porção. São quatro porções de batatas. São quatro Steaks de Carnes com 150 gramas in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 2, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-double-salad.avif', title: 'Double Salad: Steak de Carne com Salada e Molho Secreto', description:'Compartilhar com 2 pessoas. Um suculento corte de carne nobre com 300 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com duas saladas clássicas (mix de folhas verdes, tomates cerejas, nozes), e acompanhadas com duas unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado São dois Steaks de Carnes com 150 gramas de proteína in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 3, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-pour-trois-salad.avif', title: 'Pour Trois Salad: Steak de Carne com Salada e Molho Secreto', description:'Compartilhar com 3 pessoas. Um suculento corte de carne nobre com 450 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com três saladas clássicas (mix de folhas verdes, tomates cerejas, nozes), acompanhadas com três unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado São três Steaks de Carnes com 150 gramas in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {costumers: 4, category: 'principal', delivery: true, photoUrl: 'assets/img/cardapio/principal-familie-salad.avif', title: 'Famille Salad: Steak de Carne com Salada e Molho Secreto', description:'Compartilhar com 4 pessoas. Um suculento corte de carne nobre com 600 gramas de proteína in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com quatro saladas clássicas (mix de folhas verdes, tomates cerejas, nozes), e acompanhadas com quatro unidades do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado São quatro Steaks de Carnes com 150 gramas in natura (crua), selado no estojo da mesma embalagem. Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+    ];
+
+    constructor(
+        private meta: Meta,
+        private router: Router,
+        private title: Title
+    ) {
+        this.urlRefer = this.router.url.split('-').reverse()[0];
+
+        this.meta.updateTag({name:"description", content:"LS estruturas solares | Cardápio - " + this.urlRefer})
+        this.meta.updateTag({property:"og:description", content:"LS estruturas solares | Cardápio - " + this.urlRefer})
+        this.meta.updateTag({property:"og:title", content:"LS estruturas solares | cardápio de "+ this.urlRefer})
+        this.title.setTitle("LS estruturas solares | cardápio de "+ this.urlRefer)
+
+        this.menuList = this.getList(this.urlRefer)
+    }
+
+    getDescription(): string {
+        const referArray: object = {entradas: 'Entradas', principal: 'Menu Principal', sobremesas: 'Sobremesas', bebidas: 'Bebidas'}
+        return referArray[this.urlRefer] || '';
+    }
+
+    getList(reference): object[] {
+        return  this.menuListAll.filter(item => item['category'] == reference)
+    }
+
+    getCostumerText(costumers: number): string {
+        const text = costumers.toString() +' pessoas';
+        return costumers == 1 ? 'Individual' : text;
+    }
+}

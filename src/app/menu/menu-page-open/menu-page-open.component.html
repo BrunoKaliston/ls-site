@@ -1,0 +1,30 @@
+<div class="df-banner-section">
+    <div class="container flex center">
+        <div class="content txt-center">
+            <app-breadcrumb [color]="'cl-style-lt'"></app-breadcrumb>
+            <h1 class="font-title-lg cl-style-lt font-up mb-3 mt-3">{{getDescription()}}</h1>
+        </div>
+    </div>
+</div>
+<div class="category-section {{urlRefer}}">
+    <div class="container">
+        <div class="content slide-left-list">
+            <div *ngFor="let item of menuList" class="menu-item {{item['photoUrl'] ? '' : 'no-photo'}}" [attr.data-target]="item['photoUrl']" style="--bg-image: url({{item['photoUrl']}});">
+                <div class="txt-box {{item['costumers'] ? 'pb': ''}}">
+                    <h2 class="font-title-sm cl-style-dk font-up mb-2">{{item['title']}}</h2>
+                    <p class="font--sm cl-style-md mb-2">{{item['description']}}</p>
+                    <div class="flex start">
+                        <span *ngIf="item['costumers']" class="flex font-sm cl-style-dk df-border-md round mr-1">
+                            <app-svg [svgReference]="item['costumers'] == 1 ? 'user' : 'users'" [color]="'cl-style-dk'" [width]="16" class="mr-1"></app-svg>
+                            {{getCostumerText(item['costumers'])}}
+                        </span>
+                        <span *ngIf="item['delivery']" class="flex font-sm cl-style-dk df-border-md round">
+                            <app-svg [svgReference]="'check'" [color]="'cl-style-dk'" [width]="16" class="mr-1"></app-svg>
+                            delivery
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

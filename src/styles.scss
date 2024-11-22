@@ -1,0 +1,243 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'dinengschrift';
+    src: url('assets/fonts/dinengschrift.woff2') format('woff2'),
+    url('assets/fonts/dinengschrift.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'montserratblack';
+    src: url('assets/fonts/montserrat-black-webfont.woff2') format('woff2'),
+    url('assets/fonts/montserrat-black-webfont.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'montserratbold';
+    src: url('assets/fonts/montserrat-bold-webfont.woff2') format('woff2'),
+    url('assets/fonts/montserrat-bold-webfont.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'montserratregular';
+    src: url('assets/fonts/montserrat-regular-webfont.woff2') format('woff2'),
+    url('assets/fonts/montserrat-regular-webfont.woff') format('woff');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'universcondensed';
+    src: url('assets/fonts/univers-condensed.woff2') format('woff2'),
+    url('assets/fonts/univers-condensed.woff') format('woff');
+    font-display: swap;
+}
+:root{
+    --spc-1: 8px;
+    --spc-2: 16px;
+    --spc-3: 24px;
+    --spc-4: 32px;
+    --spc-5: 40px;
+    --spc-6: 48px;
+
+    --cl-bg: #EAEDF0;
+    --cl-header: #1C2228;
+    --cl-py: #2E3193;
+    --cl-sy: #F48020;
+    --cl-ty: #2187C6;
+    --cl-style-dk: #111418;
+    --cl-style-md: #A39D8F;
+    --cl-style-lt: #F5F4F3;
+    //--cl-py: #ad613c;
+    //--cl-sy: #5a564b;
+    //--cl-ty: #6c675a;
+    --cl-style-detail-gray: #B3BECA;
+}
+*{box-sizing: border-box;}
+h1, h2, h3, h4, p, span, label, a, button, input, select, textarea, *{font-family: 'montserratregular', sans-serif;line-height: 28px;font-style: normal;font-weight: 400;color: var(--cl-style-md);text-decoration: none;margin: 0;padding: 0;}
+h1, h2, h3, h4, p, span, label, a, button, input, select, textarea{font-size: 20px;}
+*::placeholder{font-family: 'montserratregular', sans-serif;font-style: normal;margin: 0;font-weight: 400;}
+::-webkit-scrollbar{display: block;width: 10px;}
+::-webkit-scrollbar-track{background: var(--cl-style-md);}
+::-webkit-scrollbar-thumb{background: var(--cl-sy);}
+::-webkit-scrollbar-thumb:hover{background: var(--cl-style-dk);}
+::placeholder{color: var(--cl-black);font-size: 14px}
+img {width: auto;max-width: 100%;height: auto;}
+
+[class*="font-bold"] {font-family: 'montserratbold', sans-serif;}
+[class*="font-black"] {font-family: 'montserratblack', sans-serif;}
+[class*="font-uni"] {font-family: 'universcondensed', sans-serif;}
+[class*="sm"] {font-size: 16px;line-height: 24px;}
+[class*="xs"] {font-size: 12px;line-height: 20px;}
+*[class*="font-display"] {font-family: 'dinengschrift', sans-serif;
+    &[class*="lg"] {font-size: 128px;line-height: 128px}
+    &[class*="md"] {font-size: 96px;line-height: 96px}
+    &[class*="sm"] {font-size: 72px;line-height: 72px}
+}
+*[class*="font-title"] {font-family: 'dinengschrift', sans-serif;
+    &[class*="lg"] {font-size: 56px;line-height: 56px}
+    &[class*="md"] {font-size: 48px;line-height: 48px}
+    &[class*="sm"] {font-size: 40px;line-height: 40px}
+}
+*[class*="font-subtitle"] {
+    &[class*="lg"] {font-size: 32px;line-height: 32px}
+    &[class*="md"] {font-size: 28px;line-height: 28px}
+    &[class*="sm"] {font-size: 24px;line-height: 24px}
+}
+
+*:focus{border: none;box-shadow: none;outline: none;}
+*.font-up{text-transform: uppercase;}
+*.font-cap{text-transform: capitalize;}
+*.font-low{text-transform: lowercase;}
+*.font-bold, .font-bold *{font-family: 'montserratbold', sans-serif;}
+*.font-black, .font-black *{font-family: 'montserratblack', sans-serif;}
+*.strikethrough{text-decoration: line-through;}
+* .hide{display: none;}
+* .pointer{cursor: pointer;}
+* .underline{text-decoration: underline;}
+* .underline-hover:hover{text-decoration: underline;}
+
+.flex, .flexDesk, .flexPad{display: flex;align-items: center;justify-content: space-between;
+    &.top{align-items: flex-start;}
+    &.fullHeight{align-items: inherit;}
+    &.bottom{align-items: flex-end;}
+    &.center{justify-content: center;}
+    &.start{justify-content: flex-start;}
+    &.end{justify-content: flex-end;}
+}
+
+.txt-center{text-align: center}
+
+a {display: inline-block;
+    &.block{display: block;}
+}
+
+html{position: relative;height: inherit;min-height: 100%;
+    body {height: 100%;min-height: 100%;width: 100%;min-width: 330px;background-color: var(--cl-bg);padding: 0;margin: 0;}
+
+    .bg-cl-header{background-color: var(--cl-header)}
+    .bg-cl-style-detail-lt{background-color: var(--cl-ty)}
+
+    .cl-bg{color: var(--cl-bg)}
+    .cl-header{color: var(--cl-header)}
+    .cl-style-dk{color: var(--cl-style-dk)}
+    .cl-style-md{color: var(--cl-style-md)}
+    .cl-style-lt{color: var(--cl-style-lt)}
+    .cl-style-detail-dk{color: var(--cl-py)}
+    .cl-style-detail-lt{color: var(--cl-ty)}
+}
+
+.container{margin: 0 auto;max-width: 1140px;
+    .slim{max-width: 800px;}
+}
+
+.mr-1{margin-right: var(--spc-1);}.ml-1{margin-left: var(--spc-1);}
+.mb-2{margin-bottom: var(--spc-2);}.ml-2{margin-left: var(--spc-2)}
+.mt-3{margin-top: var(--spc-3);}.mb-3{margin-bottom: var(--spc-3);}.mr-3{margin-right: var(--spc-3)}.ml-3{margin-left: var(--spc-3)}
+.mt-5{margin-top: var(--spc-5);}.mb-5{margin-bottom: var(--spc-5);}
+.mt-6{margin-top: var(--spc-6);}.mb-6{margin-bottom: var(--spc-6);}
+
+[class*="df-border"]{border: 2px solid;padding: var(--spc-1) var(--spc-2);}
+.df-border-lt{border-color: var(--cl-ty);}
+.df-border-md{border-color: var(--cl-sy);}
+.df-border-dk{border-color: var(--cl-py);}
+.df-border-lr{border-color: var(--cl-style-lt);}
+
+[class*="line-detail"]{display: inline-block;width: 187px;height: 4px;
+    &[class*="dk"]{background-color: var(--cl-py);}
+    &[class*="lt"]{background-color: var(--cl-style-lt);}
+    &.center{display: block;margin: 0 auto;}
+    &.block{display: block;}
+}
+
+.fade-in{animation: fadeIn 2s;}
+.slide-down{animation: fadeIn 1.5s, slideDown 1.5s;}
+.slide-up{animation: fadeIn 1.5s, slideUp 1.5s;}
+.slide-left{animation: fadeIn 1.5s, slideLeft 1.5s;}
+.slide-right{animation: fadeIn 1.5s, slideRight 1.5s;}
+
+.before-fade-in::before{@extend .fade-in}
+.before-slide-down::before{@extend .slide-down}
+.before-slide-up::before{@extend .slide-up}
+.before-slide-left::before{@extend .slide-left}
+.before-slide-right::before{@extend .slide-right}
+
+.after-fade-in::after{@extend .fade-in}
+.after-slide-down::after{@extend .slide-down}
+.after-slide-up::after{@extend .slide-up}
+.after-slide-left::after{@extend .slide-left}
+.after-slide-right::after{@extend .slide-right}
+
+$i: 1;
+@for $i from 1 through 20 {
+    $v: 0.2 * $i + 0.5;
+    .slide-up-list > :nth-child(#{$i}) {animation: fadeIn #{$v}s, slideUp #{$v}s;};
+    .slide-down-list > :nth-child(#{$i}) {animation: fadeIn #{$v}s, slideDown #{$v}s;};
+    .slide-left-list > :nth-child(#{$i}) {animation: fadeIn #{$v}s, slideLeft #{$v}s;};
+    .slide-right-list > :nth-child(#{$i}) {animation: fadeIn #{$v}s, slideRight #{$v}s;};
+    $i: $i + 1;
+}
+
+[class*='fade-'],
+[class*='slide']{
+    &.idle,
+    &.idle > *,
+    &.idle::after,
+    &.idle::before{animation: none;}
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 100%;}
+}
+@keyframes fadeOut {
+    0%{opacity: 100%;}
+    100%{opacity: 0;}
+}
+
+@keyframes slideUp {
+    0%{transform: translateY(max(+150px , +50%))}
+    100%{transform: translateY(0)}
+}
+@keyframes slideDown {
+    0%{transform: translateY(min(-150px , -50%))}
+    100%{transform: translateY(0);}
+}
+@keyframes slideLeft {
+    0%{transform: translateX(max(+200px , +15%))}
+    100%{transform: translateX(0)}
+}
+@keyframes slideRight {
+    0%{transform: translateX(min(-200px , -15%))}
+    100%{transform: translateX(0)}
+}
+
+app-breadcrumb{display: block}
+app-svg{display: inline-block}
+
+.df-banner-section{position: relative;background: #333 no-repeat 50% 0;margin: 0;
+    &::after{content: "";position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.7);z-index: 0;}
+    .container{position: relative;z-index: 10;min-height: 400px;
+        .content{max-width: 310px}
+    }
+}
+
+input, select, textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;border: none;outline: none;width: 100%;max-width: 100%;background: var(--cl-style-lt);font-size: 16px;padding: 4px;
+    &::placeholder{font-size: 16px;}
+}
+
+select{
+    background: var(--cl-style-lt) url("assets/svg-icons/arrow/jf-caret-down-sm.svg") 99% 0 no-repeat;
+    background-size: contain;
+}
+select * {
+
+}
+
+
+@media (max-width: 1172px) {
+    .container{margin: 0 var(--spc-2);}
+}
+@media (max-width: 400px) {
+    app-svg{
+        svg{max-width: 100%;}
+    }
+}

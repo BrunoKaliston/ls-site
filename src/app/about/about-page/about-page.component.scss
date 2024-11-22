@@ -1,0 +1,17 @@
+.container-fluid{display: flex;justify-content: space-around;
+    .content{width: 100%;min-width: 660px;max-width: 1000px;padding: var(--spc-5) var(--spc-2) 0;margin: 0 auto;}
+    &:after{content: "";width: 100%;max-width: 960px;height: 1083px;background: url("../../../assets/img/about.avif") 100% 0 no-repeat;background-size: contain;}
+}
+
+@media (max-width: 1930px) {
+    .container-fluid:after{background-size: cover;background-position-x: 30%;}
+}
+
+@media (max-width: 960px) {
+    .container-fluid{display: flex;justify-content: center;
+        .content{min-width: auto;
+            :not(p){display: block;text-align: center; margin-left: auto;margin-right: auto;}
+        }
+        &:after{content: none}
+    }
+}

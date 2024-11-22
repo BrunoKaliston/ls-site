@@ -1,0 +1,18 @@
+<div class="df-banner-section">
+    <div class="container flex center">
+        <div class="content txt-center">
+            <app-breadcrumb [color]="'cl-style-lt'"></app-breadcrumb>
+            <h1 class="font-title-lg cl-style-lt font-up mb-3 mt-3">Cardápio</h1>
+        </div>
+    </div>
+</div>
+<div class="category-section">
+    <div class="container">
+        <div class="content txt-center slide-up-list">
+            <div *ngFor="let category of menuCategoryList" [routerLink]="[category['url']]" class="menu-category-item txt-center bg-cl-header pointer">
+                <h2 class="font-title-sm cl-style-lt">{{category['title']}}</h2>
+                <span class="cl-style-lt font-up">Visualizar</span>
+            </div>
+        </div>
+    </div>
+</div>
