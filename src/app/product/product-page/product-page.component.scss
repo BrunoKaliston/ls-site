@@ -1,0 +1,14 @@
+.df-banner-section{background-image: url("../../../assets/img/menu.avif")}
+.category-section{padding: var(--spc-4) 0 0;
+    .content{display: grid;grid-template-columns: repeat(auto-fill, 285px);justify-content: center;
+        .menu-category-item{padding-bottom: var(--spc-2);transition: ease .3s;
+            &:nth-child(1)::before{content: url("../../../assets/img/category-entry.avif")}
+            &:nth-child(2)::before{content: url("../../../assets/img/category-main.avif")}
+            &:nth-child(3)::before{content: url("../../../assets/img/category-dessert.avif")}
+            &:nth-child(4)::before{content: url("../../../assets/img/category-drinks.avif")}
+            &:hover {box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);z-index: 1;}
+            &:hover::before{filter: brightness(0.9);transition: ease .3s;}
+            h2{padding: var(--spc-2);}
+        }
+    }
+}

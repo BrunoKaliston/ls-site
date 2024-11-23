@@ -9,8 +9,8 @@
             <ul>
                 <li *ngFor="let item of menuList; let index = index">
                     <h2>
-                        <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer sm {{getCurrentPageIndex() == index ? 'active' : ''}}" [title]="item['title']">{{item['title']}}</a>
-                        <a *ngIf="item['externalUrl']" target="_blank" [href]="item['externalUrl']" class="pointer sm {{getCurrentPageIndex() == index ? 'active' : ''}}" [title]="item['title']">{{item['title']}}</a>
+                        <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer font-size-sm {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
+                        <a *ngIf="item['externalUrl']" target="_blank" [href]="item['externalUrl']" class="pointer font-size-sm {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
                     </h2>
                 </li>
             </ul>

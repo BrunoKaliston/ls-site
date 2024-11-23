@@ -6,11 +6,13 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppComponent} from './app.component';
 import {AboutModule} from "./about/about.module";
 import {AngularSvgIconModule} from "angular-svg-icon";
-import {HomeModule} from "./home/home.module";
-import {MenuModule} from "./menu/menu.module";
-import {NotFoundModule} from "./not-found/not-found.module";
-import {SharedModule} from "./shared/shared.module";
 import {ContactModule} from "./contact/contact.module";
+import {HomeModule} from "./home/home.module";
+import {ProductModule} from "./product/product.module";
+import {NotFoundModule} from "./not-found/not-found.module";
+import {PrivacityModule} from "./privacity/privacity.module";
+import {QuoteModule} from "./quote/quote.module";
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
     declarations: [
@@ -22,8 +24,10 @@ import {ContactModule} from "./contact/contact.module";
         AboutModule,
         ContactModule,
         HomeModule,
-        MenuModule,
+        ProductModule,
         NotFoundModule,
+        PrivacityModule,
+        QuoteModule,
         SharedModule,
         HttpClientModule,
         AngularSvgIconModule.forRoot()

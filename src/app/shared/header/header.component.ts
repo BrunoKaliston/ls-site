@@ -14,7 +14,7 @@ export class HeaderComponent {
         {url: '/quemsomos', title: 'Quem somos'},
         {url: '/produtos', title: 'Produtos'},
         {url: '/contato', title: 'Contato'},
-        {url: '/orçamento', title: 'Orçamento'},
+        {url: '/orcamento', title: 'Orçamento'},
         {url: '/privacidade', title: 'Política de Privacidade'},
     ];
 
