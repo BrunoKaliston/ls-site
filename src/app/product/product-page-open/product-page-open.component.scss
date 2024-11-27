@@ -8,7 +8,7 @@
         }
     }
 }
-.menu-item{display: flex;justify-content: space-between;padding: var(--spc-4) 0;border-bottom: 1px solid var(--cl-style-detail-gray);
+.menu-item{display: flex;justify-content: space-between;padding: var(--spc-4) 0;border-bottom: 1px solid var(--cl-dt);
     [class*="df-border"]{border-width: 1px;border-radius: 4px;}
     .txt-box{position: relative;width: 100%;max-width: 55%;
         p{min-height: 144px}

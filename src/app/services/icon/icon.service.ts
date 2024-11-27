@@ -17,6 +17,10 @@ export class IconService {
     public user: string = 'assets/svg-icons/user/jf-user.svg'
     public users: string = 'assets/svg-icons/user/jf-users.svg'
 
+    public shieldstar: string = 'assets/svg-icons/site/shield-star.svg';
+    public lightbulbflash: string = 'assets/svg-icons/site/lightbulb-flash.svg';
+    public cpu: string = 'assets/svg-icons/site/cpu.svg';
+
     constructor() {
     }
 }

@@ -1,9 +1,9 @@
 <div class="holder">
     <a [routerLink]="['/']" [href]="'/'" class="flex center" [title]="'Página inícial'" aria-label="Página inícial">
-        <app-svg [svgReference]="'home'" [width]="22" [color]="color"></app-svg>
+        <app-svg [svgReference]="'home'" [size]="22" [color]="color"></app-svg>
     </a>
     <ng-container *ngFor="let item of urlList;let itemIndex = index">
-        <app-svg [svgReference]="'caretRight'" [color]="color" [width]="22" class="ml-1"></app-svg>
+        <app-svg [svgReference]="'caretRight'" [color]="color" [size]="22" class="ml-1"></app-svg>
         <a *ngIf="itemIndex < urlList.length - 1" [routerLink]="[item['url']]" [href]="item['url']" class="flex center font-uni font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</a>
         <span *ngIf="itemIndex == urlList.length - 1" class="flex center font-uni font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</span>
     </ng-container>

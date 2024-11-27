@@ -2,7 +2,7 @@
     <div class="container flex fade-in">
         <div class="logo-box">
             <a [routerLink]="['/']" [href]="'/'" class="block" [title]="'Página inícial'" aria-label="Página inícial">
-                <app-svg [svgReference]="'logo'" [width]="80" [color]="'cl-style-md'"></app-svg>
+<!--                <app-svg [svgReference]="'logo'" [width]="80" [color]="'-'"></app-svg>-->
             </a>
         </div>
         <nav #nav class="{{menuIsActive() ? 'active' : ''}}">
@@ -16,8 +16,8 @@
             </ul>
         </nav>
         <div class="aux-box flex end">
-            <a target="_blank" href="https://www.instagram.com/lentrecotedeparis/" class="flex center mr-1" aria-label="instagram"><app-svg [svgReference]="'instagram'"></app-svg></a>
-            <a target="_blank" href="https://www.facebook.com/LEntrecoteDeParis/" class="flex center mr-1" aria-label="facebook"><app-svg [svgReference]="'facebook'"></app-svg></a>
+<!--            <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex center mr-1" aria-label="instagram"><app-svg [svgReference]="'instagram'"></app-svg></a>-->
+<!--            <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex center mr-1" aria-label="facebook"><app-svg [svgReference]="'facebook'"></app-svg></a>-->
             <div *ngIf="isMobilePage()" #btnMob class="btn-mob">
                 <app-svg [svgReference]="'hamburger'" [color]="'cl-style-lt'"></app-svg>
             </div>

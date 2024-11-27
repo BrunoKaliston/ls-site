@@ -1,50 +1,31 @@
 <div class="hero-section">
     <div class="container">
-        <div class="content slide-right-list">
-            <app-svg [svgReference]="'brand'" [width]="323"></app-svg>
-            <h1 class="font-title-lg cl-style-lt font-up mb-6 mt-6">O único entrecôte com o verdadeiro sabor de Paris</h1>
-            <a target="_blank" href="https://unidades.ls.aqis.com.br/" class="df-border-lt font-uni-sm font-up pointer">Encontre A LS mais próximo</a>
+        <div class="content slide-up-list">
+            <h1 class="font-title-lg cl-style-lt font-up mt-6">Estruturas Solares</h1>
+            <h1 class="font-title-sm cl-style-lt mt-5 mb-5">Entregue ao seu cliente uma solução completa e confiável.</h1>
+            <a [routerLink]="['/orcamento']" [href]="'/orcamento'" class="df-btn font-uni-sm font-up pointer" title="Solicite um orçamento">Solicite um orçamento</a>
         </div>
     </div>
 </div>
-<div class="experience-section">
+<div class="reference-section">
     <div class="container">
-        <div class="content txt-center slide-up">
-            <h2 class="font-size-sm cl-style-dk font-up mb-3">uma experiência de sabores autênticos de Paris</h2>
-            <span class="line-detail-dk"></span>
-            <p class="font mt-3 mb-5">Sinta o sabor de Paris em cada pedacinho do nosso delicioso entrecôte e surpreenda-se com a suculência do corte, crocância das batatas fritas e o sabor incomparável do nosso molho que, apesar de ser uma receita secreta, todos já sabem: é maravilhoso!</p>
-            <a [routerLink]="['/cardapio']" [href]="'/cardapio'" class="df-border-lt font-uni-sm font-up pointer">Veja nosso cardápio</a>
-        </div>
-    </div>
-</div>
-<div class="blend-section bg-cl-style-detail-lt after-slide-left">
-    <div class="container">
-        <div class="content txt-center after-slide-left before-slide-right slide-up-list">
-            <h2 class="font-size-sm cl-style-lt font-up mb-3">Combinações perfeitas de sabores</h2>
-            <span class="line-detail-lt"></span>
-            <p class="font cl-style-lt mt-3 mb-5">Desde as entradas que abrem o apetite até as sobremesas que adoçam o paladar, cada escolha é pensada para criar uma experiência gastronômica memorável.</p>
-            <span class="line-detail-lt center"></span>
-            <a [routerLink]="['/cardapio']" [href]="'/cardapio'" class="df-border-lr cl-style-lt font-uni-sm font-up pointer mt-3">Conheça nossos pratos</a>
-        </div>
-    </div>
-</div>
-
-<div class="mix-section">
-    <div class="container-fluid after-fade-in">
-        <div class="content txt-center slide-right">
-            <h2 class="font-size-sm cl-style-dk font-up mb-3">Mixologia Deliciosa</h2>
-            <span class="line-detail-dk"></span>
-            <p class="font mt-3 mb-5">De clássicos atemporais a criações ousadas, nossa carta de drinks oferece opções para todos os paladares além de formar uma combinação inesquecível com o seu L’entrecôte.</p>
-            <a [routerLink]="['/cardapio-bebidas']" [href]="'/cardapio-bebidas'" class="df-border-lt font-uni-sm font-up pointer">Conheça nossos drinks</a>
-        </div>
-    </div>
-</div>
-<div class="care-section bg-cl-header">
-    <div class="container after-slide-right">
-        <div class="content slide-left-list">
-            <h2 class="font-size-sm cl-style-lt font-up mb-3">Cuidados que chegam até a sua casa</h2>
-            <span class="line-detail-dk"></span>
-            <p class="font cl-style-lt mt-3">A LS trabalha em todos os detalhes para você desfrutar dos sabores de Paris no conforto da sua casa.</p>
+        <h2 class="font-title-md txt-center fade-in mb-6">Somos referência em estruturas solares.</h2>
+        <div class="content txt-center slide-up-list">
+            <div class="item">
+                <app-svg class="fade-in mb-2" [svgReference]="'shieldstar'" [size]="50" [color]="'cl-style-dk'"></app-svg>
+                <h3 class="font-title-sm mb-2">Qualidade</h3>
+                <p class="font-size-sm">Utilizamos as mais avançadas técnicas de aprimoramento em estruturas metálicas, garantindo soluções de alta qualidade.</p>
+            </div>
+            <div class="item">
+                <app-svg class="fade-in mb-2" [svgReference]="'cpu'" [size]="50" [color]="'cl-style-dk'"></app-svg>
+                <h3 class="font-title-sm mb-2">Tecnologia</h3>
+                <p class="font-size-sm">Com tecnologia de ponta garantimos resistência e confiabilidade, sempre inovando para atender às necessidades do seu projeto.</p>
+            </div>
+            <div class="item">
+                <app-svg class="fade-in mb-2" [svgReference]="'lightbulbflash'" [size]="50" [color]="'cl-style-dk'"></app-svg>
+                <h3 class="font-title-sm mb-2">Inovação</h3>
+                <p class="font-size-sm">Estamos sempre inovando para oferecer a você a máxima qualidade e uma experiência incomparável.</p>
+            </div>
         </div>
     </div>
 </div>

@@ -12,9 +12,9 @@ export class HomePageComponent {
         private meta: Meta,
         private title: Title
     ) {
-        this.meta.updateTag({name:"description", content:"LS estruturas solares | Sinta o sabor de Paris em cada pedacinho do nosso delicioso entrecôte e surpreenda-se com a suculência do corte, crocância das batatas fritas e o sabor incomparável do nosso molho que, apesar de ser uma receita secreta, todos já sabem: é maravilhoso!"})
-        this.meta.updateTag({property:"og:description", content:"LS estruturas solares | Sinta o sabor de Paris em cada pedacinho do nosso delicioso entrecôte e surpreenda-se com a suculência do corte, crocância das batatas fritas e o sabor incomparável do nosso molho que, apesar de ser uma receita secreta, todos já sabem: é maravilhoso!"})
-        this.meta.updateTag({property:"og:title", content:"LS estruturas solares | o verdadeiro sabor de paris"})
-        this.title.setTitle("LS estruturas solares | o verdadeiro sabor de paris")
+        this.meta.updateTag({name:"description", content:"LS estruturas solares | Entregue ao seu cliente uma solução completa e confiável. Somos referência em estruturas solares."})
+        this.meta.updateTag({property:"og:description", content:"LS estruturas solares | Entregue ao seu cliente uma solução completa e confiável. Somos referência em estruturas solares."})
+        this.meta.updateTag({property:"og:title", content:"LS estruturas solares | Uma solução completa e confiável"})
+        this.title.setTitle("LS estruturas solares | Uma solução completa e confiável")
     }
 }

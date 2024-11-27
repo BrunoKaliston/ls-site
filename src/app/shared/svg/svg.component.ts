@@ -10,8 +10,9 @@ import {DomSanitizer, SafeHtml} from "@angular/platform-browser";
 export class SvgComponent implements OnChanges{
 
     @Input() svgReference: string;
-    @Input() width: number = 20;
-    @Input() color: string = 'cl-style-detail-lt';
+    @Input() size: number = 20;
+    @Input() color: string = 'cl-style-dk';
+    @Input() customHeight: boolean = false;
 
     private svgUrl: string = '';
     private svgReferenceList: object = {
@@ -26,6 +27,9 @@ export class SvgComponent implements OnChanges{
         logo: this.iconService.logo,
         user: this.iconService.user,
         users: this.iconService.users,
+        shieldstar: this.iconService.shieldstar,
+        lightbulbflash: this.iconService.lightbulbflash,
+        cpu: this.iconService.cpu,
     };
 
     public colorCss: string = '';
@@ -54,6 +58,11 @@ export class SvgComponent implements OnChanges{
 
     getSvgUrl(): string {
         return this.svgUrl;
+    }
+
+    getHeight(): string {
+        let height = this.size.toString() + 'px';
+        return this.customHeight ? 'auto' : height;
     }
 
 }

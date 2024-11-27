@@ -1,9 +1,9 @@
-.content{padding: var(--spc-4) 0 0 }
-.content{width: 100%;max-width: 414px;margin: 0 auto;
-    &:before{content: url("../../../assets/img/contact-bg-1.avif");position: absolute;top: 0;left: 0;display: flex;justify-content: flex-start;width: calc(50% - 230px);overflow: hidden;}
-    &:after{content: url("../../../assets/img/contact-bg-2.avif");position: absolute;top: 0;right: 0;display: flex;justify-content: flex-end;width: calc(50% - 230px);overflow: hidden;}
+.contact-section{padding: 80px 0 60px;
+    .content{width: 100%;max-width: 700px;padding: var(--spc-4);margin: var(--spc-2) auto;background: var(--cl-ty);
+        span,h1{color: var(--cl-style-lt)}
+        .flex input:first-child{margin-right: var(--spc-2)}
+    }
 }
-
 
 @media (max-width: 1680px) {
     .content{

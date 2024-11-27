@@ -15,11 +15,12 @@
                     <p class="font--sm cl-style-md mb-2">{{item['description']}}</p>
                     <div class="flex start">
                         <span *ngIf="item['costumers']" class="flex font-size-sm cl-style-dk df-border-md round mr-1">
-                            <app-svg [svgReference]="item['costumers'] == 1 ? 'user' : 'users'" [color]="'cl-style-dk'" [width]="16" class="mr-1"></app-svg>
+                            <app-svg [svgReference]="item['costumers'] == 1 ? 'user' : 'users'" [color]="'cl-style-dk'"
+                                     [size]="16" class="mr-1"></app-svg>
                             {{getCostumerText(item['costumers'])}}
                         </span>
                         <span *ngIf="item['delivery']" class="flex font-size-sm cl-style-dk df-border-md round">
-                            <app-svg [svgReference]="'check'" [color]="'cl-style-dk'" [width]="16" class="mr-1"></app-svg>
+                            <app-svg [svgReference]="'check'" [color]="'cl-style-dk'" [size]="16" class="mr-1"></app-svg>
                             delivery
                         </span>
                     </div>

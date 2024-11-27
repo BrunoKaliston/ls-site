@@ -15,7 +15,7 @@ export class HeaderComponent {
         {url: '/produtos', title: 'Produtos'},
         {url: '/contato', title: 'Contato'},
         {url: '/orcamento', title: 'Orçamento'},
-        {url: '/privacidade', title: 'Política de Privacidade'},
+        // {url: '/privacidade', title: 'Política de Privacidade'},
     ];
 
     private currentPageIndex: number = null;

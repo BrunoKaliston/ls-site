@@ -1,21 +1,16 @@
 <div class="contact-section">
     <div class="container flex center">
         <div class="content txt-center">
-            <app-breadcrumb class="mb-5" [color]="'cl-style-dk'"></app-breadcrumb>
-            <app-svg class="fade-in" [svgReference]="'brand'" [width]="400"></app-svg>
-            <h1 class="font-title-lg cl-style-dk mb-3">Fale Conosco</h1>
-            <span class="line-detail-dk"></span>
+<!--            <app-breadcrumb class="mb-5" [color]="'cl-style-dk'"></app-breadcrumb>-->
+<!--            <app-svg class="fade-in mb-3" [svgReference]="'brand'" [customHeight]="true" [size]="400" [color]="'-'"></app-svg>-->
+            <h1 class="font-title-lg cl-style-dk mb-3">Entre em contato</h1>
             <div class="form-box mt-3 slide-left-list" [formGroup]="contactForm">
-                <div class="flex center mb-3">
+                <div class="flex mb-3">
                     <input placeholder="Nome" [formControlName]="'name'" type="text" onClick="this.select();">
-                </div>
-                <div class="flex center mb-3">
                     <input placeholder="E-mail" [formControlName]="'email'" type="text" onClick="this.select();">
                 </div>
-                <div class="flex center mb-3">
+                <div class="flex mb-3">
                     <input placeholder="DDD + Telfone" [formControlName]="'phone'" type="text" onClick="this.select();">
-                </div>
-                <div class="flex center mb-3">
                     <select [formControlName]="'subject'">
                         <option value="null" disabled selected>Assunto</option>
                         <option value="E-mail do Site - Contato" selected>Contato</option>
@@ -27,8 +22,8 @@
                     <textarea placeholder="Mensagem" [formControlName]="'message'"></textarea>
                 </div>
                 <div class="flex bottom mt-3">
-                    <span (click)="resetForm()" class="pointer">limpar campos</span>
-                    <button *ngIf="!sending" (click)="sendMail()" class="df-border-dk font-up">Enviar</button>
+                    <span (click)="resetForm()" class="font-size-sm pointer underline">Limpar campos</span>
+                    <button *ngIf="!sending" (click)="sendMail()" class="df-btn-square font-up">Enviar</button>
                     <button *ngIf="sending"  class="df-border-dk font-up">Enviando...</button>
                 </div>
             </div>
