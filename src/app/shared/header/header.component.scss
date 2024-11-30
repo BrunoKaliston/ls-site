@@ -1,4 +1,4 @@
-header{background-color: var(--cl-header);
+header{background-color: var(--cl-py);
     &.home-page{background: none;}
     .container{min-height: 88px;}
 }
@@ -12,6 +12,7 @@ nav{
         li {margin-right: var(--spc-1);
             a{position: relative;display: flex;align-items: center;color: var(--cl-style-lt);height: var(--spc-6);padding: 0 var(--spc-1);text-decoration: none;
                 &.active{padding: 0 calc(var(--spc-1) - 1px);}
+                &:hover{color: var(--cl-sy)}
                 //&.active::after{content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 4px;background-color: var(--cl-py);}
             }
             &:last-child{margin-right: 0}

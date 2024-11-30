@@ -1,8 +1,9 @@
+<div class="container flex center">
+    <app-breadcrumb class="mt-6 mb-6" [color]="'cl-style-dk'"></app-breadcrumb>
+</div>
 <div class="contact-section">
     <div class="container flex center">
         <div class="content txt-center">
-<!--            <app-breadcrumb class="mb-5" [color]="'cl-style-dk'"></app-breadcrumb>-->
-<!--            <app-svg class="fade-in mb-3" [svgReference]="'brand'" [customHeight]="true" [size]="400" [color]="'-'"></app-svg>-->
             <h1 class="font-title-lg cl-style-dk mb-3">Entre em contato</h1>
             <div class="form-box mt-3 slide-left-list" [formGroup]="contactForm">
                 <div class="flex mb-3">
@@ -23,7 +24,7 @@
                 </div>
                 <div class="flex bottom mt-3">
                     <span (click)="resetForm()" class="font-size-sm pointer underline">Limpar campos</span>
-                    <button *ngIf="!sending" (click)="sendMail()" class="df-btn-square font-up">Enviar</button>
+                    <button *ngIf="!sending" (click)="sendMail()" class="df-btn-square-shadow font-up">Enviar</button>
                     <button *ngIf="sending"  class="df-border-dk font-up">Enviando...</button>
                 </div>
             </div>

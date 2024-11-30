@@ -12,6 +12,7 @@ export class SvgComponent implements OnChanges{
     @Input() svgReference: string;
     @Input() size: number = 20;
     @Input() color: string = 'cl-style-dk';
+    @Input() hoverColor: string = '';
     @Input() customHeight: boolean = false;
 
     private svgUrl: string = '';
@@ -27,6 +28,7 @@ export class SvgComponent implements OnChanges{
         logo: this.iconService.logo,
         user: this.iconService.user,
         users: this.iconService.users,
+        whatsapp: this.iconService.whatsapp,
         shieldstar: this.iconService.shieldstar,
         lightbulbflash: this.iconService.lightbulbflash,
         cpu: this.iconService.cpu,
@@ -47,6 +49,7 @@ export class SvgComponent implements OnChanges{
         if (this.svgReference) {
             this.svgUrl = this.svgReferenceList[this.svgReference];
         }
+        this.colorCss = this.color;
     }
 
     iconHasColor(): boolean {

@@ -1,10 +1,32 @@
-.container-fluid{display: flex;justify-content: space-around;
-    .content{width: 100%;min-width: 660px;max-width: 1000px;padding: var(--spc-5) var(--spc-2) 0;margin: 0 auto;}
-    &:after{content: "";width: 100%;max-width: 960px;height: 1083px;background: url("../../../assets/img/about.avif") 100% 0 no-repeat;background-size: contain;}
+//.container-fluid{display: flex;justify-content: space-around;
+//    .content{width: 100%;min-width: 660px;padding: var(--spc-5) var(--spc-2) 0;margin: 0 auto;}
+//    &:after{content: "";width: 100%;max-width: 960px;height: 1083px;background: url("../../../assets/img/about.avif") 100% 0 no-repeat;background-size: contain;}
+//}
+
+.experience-section{padding: 64px 0 64px;
+    .content{max-width: 820px;margin: 0 auto;}
+    .video-box{position: relative;max-width: 800px;margin: 0 auto;aspect-ratio: 16/8;z-index: 10;
+        iframe{width: 100%;max-height: 100%;}
+    }
 }
 
-@media (max-width: 1930px) {
-    .container-fluid:after{background-size: cover;background-position-x: 30%;}
+.photo-section{padding: 100px 0 64px;
+    .img-box {text-align: center;
+        div{display: inline-flex;
+            width: 700px;
+            max-width: calc(100% - var(--spc-2));
+            aspect-ratio: 1;
+            margin: var(--spc-1);
+            &:nth-child(1){background: url(../../../assets/img/photo-1.avif) no-repeat 50%;background-size: contain;}
+            &:nth-child(2){background: url(../../../assets/img/photo-2.avif) no-repeat 50%;background-size: contain;}
+            &:nth-child(3){background: url(../../../assets/img/photo-3.avif) no-repeat 50%;background-size: contain;}
+            &:nth-child(4){background: url(../../../assets/img/photo-4.avif) no-repeat 50%;background-size: contain;}
+            &:nth-child(5){background: url(../../../assets/img/photo-5.avif) no-repeat 50%;background-size: contain;}
+            &:nth-child(6){background: url(../../../assets/img/photo-6.avif) no-repeat 50%;background-size: contain;aspect-ratio: 4/3;}
+            &:nth-child(7){background: url(../../../assets/img/photo-7.avif) no-repeat 50%;background-size: contain;aspect-ratio: 4/3;}
+            &:nth-child(8){background: url(../../../assets/img/photo-8.avif) no-repeat 50%;background-size: contain;aspect-ratio: 4/3;}
+        }
+    }
 }
 
 @media (max-width: 960px) {
@@ -14,4 +36,8 @@
         }
         &:after{content: none}
     }
+}
+
+@media (max-width: 880px) {
+    .video-box{margin-bottom: 0;}
 }

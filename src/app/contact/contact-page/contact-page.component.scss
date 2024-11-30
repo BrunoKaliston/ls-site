@@ -1,6 +1,6 @@
-.contact-section{padding: 80px 0 60px;
-    .content{width: 100%;max-width: 700px;padding: var(--spc-4);margin: var(--spc-2) auto;background: var(--cl-ty);
-        span,h1{color: var(--cl-style-lt)}
+.contact-section{margin: 0 0 50px;
+    .content{width: 100%;max-width: 700px;padding: var(--spc-4);margin: 0 auto ;background: var(--cl-ty-lt);
+        span,h1{color: var(--cl-py)}
         .flex input:first-child{margin-right: var(--spc-2)}
     }
 }

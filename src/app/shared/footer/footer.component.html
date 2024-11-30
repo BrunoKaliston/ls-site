@@ -1,12 +1,47 @@
-<div class="container">
-    <div class="content-box txt-center">
-        <app-svg class="fade-in mb-3" [svgReference]="'brand'" [customHeight]="true" [size]="300" [color]="'-'"></app-svg>
-        <h2 class="font-title-lg cl-style-dk mb-3">Compartilhe sua experiência</h2>
-        <div class="btn-box flex center slide-up-list">
-            <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex df-border-lt font-uni-sm font-up pointer mr-3" aria-label="instagram"><app-svg [svgReference]="'instagram'" class="mr-1"></app-svg>Instagram</a>
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex df-border-lt font-uni-sm font-up pointer" aria-label="facebook"><app-svg [svgReference]="'facebook'" class="mr-1"></app-svg>Facebook</a>
+<div class="footer">
+    <div class="container">
+        <div class="content-box">
+            <div class="item">
+                <h2 class="font-bold mb-2">LS Estruturas Solares</h2>
+<!--                <app-svg class="fade-in mb-2" [svgReference]="'brand'" [customHeight]="true" [size]="50" [color]="'-'"></app-svg>-->
+                <p>Nosso endereço, 123, Centro, São Miguel do Oeste - SC</p>
+            </div>
+            <div class="item">
+                <h2 class="font-bold mb-2">Navegação</h2>
+                <nav>
+                    <ul>
+                        <li *ngFor="let item of menuList; let index = index">
+                            <h2>
+                                <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer" [title]="item['title']">{{item['title']}}</a>
+                                <a *ngIf="item['externalUrl']" target="_blank" [href]="item['externalUrl']" class="pointer" [title]="item['title']">{{item['title']}}</a>
+                            </h2>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="item">
+                <h2 class="font-bold mb-2">Atendimento</h2>
+                <div class="btn-box flex start slide-up-list mb-5">
+                    <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex font-up pointer mr-1" (mouseover)="setColor('cl-sy')" (mouseleave)="setColor('cl-style-lt')" aria-label="whatsapp" #anchor><app-svg class="mr-1" [color]="getColor()" [svgReference]="'whatsapp'"></app-svg> (49) 1234-5678</a>
+                </div>
+                <h2 class="font-bold mb-2">Rede Sociais</h2>
+                <div class="btn-box flex start slide-up-list">
+                    <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex font-up pointer mr-1" aria-label="instagram"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'instagram'"></app-svg></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex font-up pointer" aria-label="facebook"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'facebook'"></app-svg></a>
+                </div>
+            </div>
+            <div class="item">
+                <h2 class="font-bold mb-2">Mapa</h2>
+                <div class="map-box fade-in">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57010.64609819069!2d-53.545571797558566!3d-26.739098058554656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fa5c7d33b22815%3A0xe99fd48cf59a68b1!2sS%C3%A3o%20Miguel%20do%20Oeste%2C%20SC%2C%2089900-000!5e0!3m2!1spt-BR!2sbr!4v1732925665243!5m2!1spt-BR!2sbr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </div>
-        <p class="font-size-sm mt-3">© Copyright {{getCurrentYear()}} LS Estruturas Solares - Feito com 🧡 por <a class="pointer font-size-sm underline-hover" target="_blank" href="https://hexah.com.br">Hexah Digital</a></p>
-        <p class="font-size-sm mt-1">Todos os direitos reservados.</p>
     </div>
+</div>
+
+<div class="bottom-section txt-center">
+    <p class="font-size-sm cl-style-lt mt-3">© Copyright {{getCurrentYear()}} LS Estruturas Solares - Feito com 🧡 por <a class="cl-style-lt pointer font-size-sm underline-hover" target="_blank" href="https://hexah.com.br">Hexah Digital</a></p>
+    <p class="font-size-sm cl-style-lt mt-1">Todos os direitos reservados.</p>
 </div>

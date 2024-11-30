@@ -131,16 +131,14 @@ a {display: inline-block;
 html{position: relative;height: inherit;min-height: 100%;
     body {height: 100%;min-height: 100%;width: 100%;min-width: 330px;background-color: var(--cl-bg);padding: 0;margin: 0;}
 
-    .bg-cl-header{background-color: var(--cl-header)}
-    .bg-cl-style-detail-lt{background-color: var(--cl-ty)}
+    .bg-cl-py{background-color: var(--cl-py)}
+    .bg-cl-lt{background-color: var(--cl-ty)}
 
     .cl-bg{color: var(--cl-bg)}
     .cl-header{color: var(--cl-header)}
     .cl-style-dk{color: var(--cl-style-dk)}
     .cl-style-md{color: var(--cl-style-md)}
     .cl-style-lt{color: var(--cl-style-lt)}
-    .cl-style-detail-dk{color: var(--cl-py)}
-    .cl-style-detail-lt{color: var(--cl-ty)}
 }
 
 .container{margin: 0 auto;max-width: 1140px;
@@ -159,14 +157,15 @@ html{position: relative;height: inherit;min-height: 100%;
 .df-border-dk{border-color: var(--cl-py);}
 .df-border-lr{border-color: var(--cl-style-lt);}
 
-[class*="df-btn"]{@extend .flex-in;height: var(--spc-5);white-space: nowrap;padding: 0 var(--spc-2);border-radius: 100px;background-color: var(--cl-sy);color: var(--cl-style-lt);border: none;cursor: pointer;
+[class*="df-btn"]{@extend .flex-in;height: var(--spc-5);white-space: nowrap;padding: 0 var(--spc-2);border-radius: 100px;background-color: var(--cl-py);color: var(--cl-style-lt);border: none;cursor: pointer;
+    &[class*="btn-sy"]{background-color: var(--cl-sy);}
     &[class*="-square"]{border-radius: 0;}
-    &[class*="btn-lt"]{background-color: var(--cl-style-lt);color: var(--cl-style-py)}
-    &[class*="btn-lt-sy"]{background-color: var(--cl-style-lt);color: var(--cl-style-sy)}
-    &[class*="border-py"]{border: 1px solid var(--cl-style-py);padding: 0 var(--spc-4);}
-    &.active{background-color: var(--cl-style-sy-b)}
-    &[class*="-no-shadow"]{box-shadow: none;}
-    &[class*="round"]{justify-content: center;padding: 0;aspect-ratio: 1;}
+    &[class*="-shadow"]{box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.3);}
+    //&[class*="btn-lt"]{background-color: var(--cl-style-lt);color: var(--cl-style-py)}
+    //&[class*="border-py"]{border: 1px solid var(--cl-style-py);padding: 0 var(--spc-4);}
+    //&.active{background-color: var(--cl-style-sy-b)}
+    //&[class*="-no-shadow"]{box-shadow: none;}
+    //&[class*="round"]{justify-content: center;padding: 0;aspect-ratio: 1;}
 }
 
 [class*="line-detail"]{display: inline-block;width: 187px;height: 4px;
@@ -251,7 +250,7 @@ app-svg{display: inline-block}
 input, select, textarea{-webkit-appearance: none;-moz-appearance: none;appearance: none;border: none;outline: none;width: 100%;max-width: 100%;background: var(--cl-style-lt);font-size: 16px;padding: 4px;
     &::placeholder{font-size: 16px;}
 }
-.flex input:nth-child(1) {margin-right: var(--spc-1);}
+
 
 select{
     background: var(--cl-style-lt) url("assets/svg-icons/arrow/jf-caret-down-sm.svg") 99% 0 no-repeat;

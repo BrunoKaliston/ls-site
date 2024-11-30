@@ -8,19 +8,16 @@ import {Router} from "@angular/router";
 })
 export class BreadcrumbComponent implements OnInit {
 
-    @Input() color: string = 'cl-style-detail-lt';
+    @Input() color: string = 'cl-style-dk';
 
     public urlList: object[] = [];
 
     private titleRefer: object = {
         home: "Home",
-        lentrecote: "A LS",
-        cardapio: "Cardápio",
-        contato: "Fale Conosco",
-        entradas: 'Entradas',
-        principal: 'Menu Principal',
-        sobremesas: 'Sobremesas',
-        bebidas: 'Bebidas',
+        quemsomos:  'Quem somos',
+        produtos:  'Produtos',
+        contato:  'Contato',
+        orcamento:  'Orçamento',
     }
 
     constructor(

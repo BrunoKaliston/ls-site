@@ -4,7 +4,7 @@
     </a>
     <ng-container *ngFor="let item of urlList;let itemIndex = index">
         <app-svg [svgReference]="'caretRight'" [color]="color" [size]="22" class="ml-1"></app-svg>
-        <a *ngIf="itemIndex < urlList.length - 1" [routerLink]="[item['url']]" [href]="item['url']" class="flex center font-uni font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</a>
-        <span *ngIf="itemIndex == urlList.length - 1" class="flex center font-uni font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</span>
+        <a *ngIf="itemIndex < urlList.length - 1" [routerLink]="[item['url']]" [href]="item['url']" class="flex center font-size font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</a>
+        <span *ngIf="itemIndex == urlList.length - 1" class="flex center font-size font-up ml-1 {{color}}" [title]="item['title']">{{item['title']}}</span>
     </ng-container>
 </div>

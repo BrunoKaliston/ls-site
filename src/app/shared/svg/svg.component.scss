@@ -2,9 +2,14 @@ svg-icon{display: block;line-height: 0;}
 
 .cl-bg *{fill: var(--cl-bg);}
 .cl-header *{fill: var(--cl-header);}
+.cl-sy *{fill: var(--cl-sy);}
 .cl-style-dk *{fill: var(--cl-styke-dk);}
 .cl-style-md *{fill: var(--cl-style-md);}
 .cl-style-lt *{fill: var(--cl-style-lt);}
-.cl-style-detail-dk *{fill: var(--cl-py);}
-.cl-style-detail-md *{fill: var(--cl-sy);}
-.cl-style-detail-lt *{fill: var(--cl-ty);}
+
+.h-cl-bg:hover *{fill: var(--cl-bg);}
+.h-cl-header:hover *{fill: var(--cl-header);}
+.h-cl-sy:hover *{fill: var(--cl-sy);}
+.h-cl-style-dk:hover *{fill: var(--cl-styke-dk);}
+.h-cl-style-md:hover *{fill: var(--cl-style-md);}
+.h-cl-style-lt:hover *{fill: var(--cl-style-lt);}

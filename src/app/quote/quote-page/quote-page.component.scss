@@ -1,7 +1,8 @@
-.content{padding: var(--spc-4) 0 0 }
-.content{width: 100%;max-width: 414px;margin: 0 auto;
-    &:before{content: url("../../../assets/img/contact-bg-1.avif");position: absolute;top: 0;left: 0;display: flex;justify-content: flex-start;width: calc(50% - 230px);overflow: hidden;}
-    &:after{content: url("../../../assets/img/contact-bg-2.avif");position: absolute;top: 0;right: 0;display: flex;justify-content: flex-end;width: calc(50% - 230px);overflow: hidden;}
+.contact-section{margin: 0 0 50px;
+    .content{width: 100%;max-width: 700px;padding: var(--spc-4);margin: 0 auto ;background: var(--cl-ty-lt);
+        span,h1{color: var(--cl-py)}
+        .flex:not(.center) input:first-child{margin-right: var(--spc-2)}
+    }
 }
 
 

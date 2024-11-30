@@ -16,6 +16,7 @@ export class IconService {
     public instagram: string = 'assets/svg-icons/social/jf-instagram.svg'
     public user: string = 'assets/svg-icons/user/jf-user.svg'
     public users: string = 'assets/svg-icons/user/jf-users.svg'
+    public whatsapp: string = 'assets/svg-icons/social/jf-whatsapp.svg'
 
     public shieldstar: string = 'assets/svg-icons/site/shield-star.svg';
     public lightbulbflash: string = 'assets/svg-icons/site/lightbulb-flash.svg';
