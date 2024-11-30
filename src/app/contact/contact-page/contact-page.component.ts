@@ -11,7 +11,7 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class ContactPageComponent {
 
-    private mailerRouter: string = 'https://ls.aqis.com.br/mailer.php'
+    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;

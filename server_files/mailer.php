@@ -55,7 +55,7 @@ try {
 //    $mail->addAddress($email, 'Site - restaurante');
 
 //    $to = "bruno@hexah.com.br"; //Enviar para
-    $to = "marketing@ls.aqis.com.br"; //Enviar para
+    $to = "marketing@lsestruturassolares.aqis.com.br"; //Enviar para
     $mail->AddAddress($to);
     $mail->Subject = $subject; //Assunto
     $mail->WordWrap = 80; // set word wrap

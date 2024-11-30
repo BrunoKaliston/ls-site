@@ -7,7 +7,7 @@ import {Meta} from "@angular/platform-browser";
 })
 export class HeadService {
 
-    private urlSiteStart = 'https://ls.aqis.com.br';
+    private urlSiteStart = 'https://lsestruturassolares.aqis.com.br';
 
     constructor(
         @Inject(DOCUMENT) private dom,

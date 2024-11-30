@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "lentrecote-site": {
+        "ls-site": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/lentrecote-site/browser",
+                        "outputPath": "dist/ls-site/browser",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": [
@@ -65,10 +65,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "browserTarget": "lentrecote-site:build:production"
+                            "browserTarget": "ls-site:build:production"
                         },
                         "development": {
-                            "browserTarget": "lentrecote-site:build:development"
+                            "browserTarget": "ls-site:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "lentrecote-site:build"
+                        "browserTarget": "ls-site:build"
                     }
                 },
                 "test": {
@@ -101,7 +101,7 @@
                 "server": {
                     "builder": "@angular-devkit/build-angular:server",
                     "options": {
-                        "outputPath": "dist/lentrecote-site/server",
+                        "outputPath": "dist/ls-site/server",
                         "main": "server.ts",
                         "tsConfig": "tsconfig.server.json",
                         "inlineStyleLanguage": "scss"
@@ -124,12 +124,12 @@
                     "builder": "@nguniversal/builders:ssr-dev-server",
                     "configurations": {
                         "development": {
-                            "browserTarget": "lentrecote-site:build:development",
-                            "serverTarget": "lentrecote-site:server:development"
+                            "browserTarget": "ls-site:build:development",
+                            "serverTarget": "ls-site:server:development"
                         },
                         "production": {
-                            "browserTarget": "lentrecote-site:build:production",
-                            "serverTarget": "lentrecote-site:server:production"
+                            "browserTarget": "ls-site:build:production",
+                            "serverTarget": "ls-site:server:production"
                         }
                     },
                     "defaultConfiguration": "development"
@@ -143,12 +143,12 @@
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "lentrecote-site:build:production",
-                            "serverTarget": "lentrecote-site:server:production"
+                            "browserTarget": "ls-site:build:production",
+                            "serverTarget": "ls-site:server:production"
                         },
                         "development": {
-                            "browserTarget": "lentrecote-site:build:development",
-                            "serverTarget": "lentrecote-site:server:development"
+                            "browserTarget": "ls-site:build:development",
+                            "serverTarget": "ls-site:server:development"
                         }
                     },
                     "defaultConfiguration": "production"

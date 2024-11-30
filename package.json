@@ -1,5 +1,5 @@
 {
-  "name": "lentrecote-site",
+  "name": "ls-site",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "dev:ssr": "ng run lentrecote-site:serve-ssr",
-    "serve:ssr": "node dist/lentrecote-site/server/main.js",
-    "build:ssr": "ng build && ng run lentrecote-site:server",
-    "prerender": "ng run lentrecote-site:prerender"
+    "dev:ssr": "ng run ls-site:serve-ssr",
+    "serve:ssr": "node dist/ls-site/server/main.js",
+    "build:ssr": "ng build && ng run ls-site:server",
+    "prerender": "ng run ls-site:prerender"
   },
   "private": true,
   "dependencies": {

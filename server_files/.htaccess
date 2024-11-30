@@ -2,9 +2,9 @@ RewriteEngine On
 RewriteBase /
 RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.*)/"
 RewriteRule [A-Z] %1 [R=301,L]
-RewriteCond %{HTTP_HOST} ^www.ls.aqis.com.br$ [NC]
-RewriteRule ^(.*)$ https://ls.aqis.com.br/$1 [R=301,L]
-ErrorDocument 404 https://ls.aqis.com.br/404
+RewriteCond %{HTTP_HOST} ^www.lsestruturassolares.aqis.com.br$ [NC]
+RewriteRule ^(.*)$ https://lsestruturassolares.aqis.com.br/$1 [R=301,L]
+ErrorDocument 404 https://lsestruturassolares.aqis.com.br/404
 
 
 <FilesMatch "\.(?i:js|css|avif|woff2|svg|ico|swf)$">

@@ -1,39 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://ls.aqis.com.br/</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/lentrecote</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/contato</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/cardapio</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/orcamento</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/cardapio-entradas</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/privacidade</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/cardapio-principal</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/produtos</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/cardapio-sobremesas</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/quemsomos</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
     <url>
-        <loc>https://ls.aqis.com.br/cardapio-bebidas</loc>
-        <lastmod>2023-08-05</lastmod>
-    </url>
-    <url>
-        <loc>https://ls.aqis.com.br/contato</loc>
-        <lastmod>2023-08-05</lastmod>
-    </url>
-    <url>
-        <loc>https://ls.aqis.com.br/novidade</loc>
-        <lastmod>2023-08-05</lastmod>
+        <loc>https://lsestruturassolares.aqis.com.br/404</loc>
+        <lastmod>2024-11-29</lastmod>
     </url>
 </urlset>
