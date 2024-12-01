@@ -16,10 +16,8 @@
             </ul>
         </nav>
         <div class="aux-box flex end">
-<!--            <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex center mr-1" aria-label="instagram"><app-svg [svgReference]="'instagram'"></app-svg></a>-->
-<!--            <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex center mr-1" aria-label="facebook"><app-svg [svgReference]="'facebook'"></app-svg></a>-->
             <div *ngIf="isMobilePage()" #btnMob class="btn-mob">
-                <app-svg [svgReference]="'hamburger'" [color]="'cl-style-lt'"></app-svg>
+                <app-svg [svgReference]="'hamburger'" [size]="40" [color]="'cl-style-lt'"></app-svg>
             </div>
         </div>
     </div>

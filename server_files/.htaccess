@@ -6,7 +6,6 @@ RewriteCond %{HTTP_HOST} ^www.lsestruturassolares.aqis.com.br$ [NC]
 RewriteRule ^(.*)$ https://lsestruturassolares.aqis.com.br/$1 [R=301,L]
 ErrorDocument 404 https://lsestruturassolares.aqis.com.br/404
 
-
 <FilesMatch "\.(?i:js|css|avif|woff2|svg|ico|swf)$">
   <IfModule mod_headers.c>
     Header set Cache-Control "max-age=172800, public, must-revalidate"

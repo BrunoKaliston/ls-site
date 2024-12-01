@@ -1,12 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @font-face {
-    font-family: 'dinengschrift';
-    src: url('assets/fonts/dinengschrift.woff2') format('woff2'),
-    url('assets/fonts/dinengschrift.woff') format('woff');
-    font-display: swap;
-}
-@font-face {
     font-family: 'montserratblack';
     src: url('assets/fonts/montserrat-black-webfont.woff2') format('woff2'),
     url('assets/fonts/montserrat-black-webfont.woff') format('woff');
@@ -24,12 +18,6 @@
     url('assets/fonts/montserrat-regular-webfont.woff') format('woff');
     font-display: swap;
 }
-@font-face {
-    font-family: 'universcondensed';
-    src: url('assets/fonts/univers-condensed.woff2') format('woff2'),
-    url('assets/fonts/univers-condensed.woff') format('woff');
-    font-display: swap;
-}
 :root{
     --spc-1: 8px;
     --spc-2: 16px;
@@ -44,7 +32,7 @@
     --cl-sy: #F48020;
     --cl-ty: #2187C6;
     --cl-ty-lt: #59c0ff;
-    --cl-style-dk: #111418;
+    --cl-style-dk: #000000;
     --cl-style-md: #A39D8F;
     --cl-style-lt: #F5F4F3;
     --cl-dt: #e9e9e9;
@@ -54,28 +42,12 @@ h1, h2, h3, h4, p, span, label, a, button, input, select, textarea, *{font-famil
 //h1, h2, h3, h4, p, span, label, a, button, input, select, textarea, *{font-family: 'interregular', sans-serif;line-height: 20px;font-style: normal;font-weight: 400;color: var(--cl-style-dk);text-decoration: none;margin: 0;padding: 0;}
 h1, h2, h3, h4, p, span, label, a, button, input, select, textarea{font-size: 16px;}
 *::placeholder{font-family: 'montserratregular', sans-serif;font-style: normal;margin: 0;font-weight: 400;}
-::-webkit-scrollbar{display: block;width: 10px;}
-::-webkit-scrollbar-track{background: var(--cl-style-md);}
-::-webkit-scrollbar-thumb{background: var(--cl-sy);}
-::-webkit-scrollbar-thumb:hover{background: var(--cl-style-dk);}
+::-webkit-scrollbar{display: block;width: 11px;}
+::-webkit-scrollbar-track{background: var(--cl-sy);}
+::-webkit-scrollbar-thumb{background: var(--cl-py);}
+::-webkit-scrollbar-thumb:hover{background: var(--cl-ty);}
 ::placeholder{color: var(--cl-black);font-size: 14px}
 img {width: auto;max-width: 100%;height: auto;}
-
-//[class*="font-bold"] {font-family: 'montserratbold', sans-serif;}
-//[class*="font-black"] {font-family: 'montserratblack', sans-serif;}
-//[class*="font-uni"] {font-family: 'universcondensed', sans-serif;}
-//[class*="sm"] {font-size: 16px;line-height: 24px;}
-//[class*="xs"] {font-size: 12px;line-height: 20px;}
-//*[class*="font-display"] {font-family: 'dinengschrift', sans-serif;
-//    &[class*="lg"] {font-size: 128px;line-height: 128px}
-//    &[class*="md"] {font-size: 96px;line-height: 96px}
-//    &[class*="sm"] {font-size: 72px;line-height: 72px}
-//}
-//*[class*="font-title"] {font-family: 'dinengschrift', sans-serif;
-//    &[class*="lg"] {font-size: 56px;line-height: 56px}
-//    &[class*="md"] {font-size: 48px;line-height: 48px}
-//    &[class*="sm"] {font-size: 40px;line-height: 40px}
-//}
 
 .font-bold,strong{font-family: 'montserratbold', sans-serif;}
 .font-black{font-family: 'montserratblack', sans-serif;font-weight: 900;}

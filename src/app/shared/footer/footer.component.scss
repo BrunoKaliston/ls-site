@@ -1,6 +1,5 @@
-.footer{padding: 20px 0 10px;background: var(--cl-ty);margin-top: 150px;
+.footer{padding: 20px 0;background: var(--cl-ty);
     *{color: var(--cl-style-lt);
-        //a:hover{font-family: 'montserratbold', sans-serif}
         a:hover{color: var(--cl-sy);
             * svg{fill: var(--cl-sy)}
         }
@@ -9,9 +8,7 @@
         .item{display: inline-flex;width: 250px;flex-direction: column;text-align: left;margin: var(--spc-2) var(--spc-1);}
         ul {list-style: none;padding: 0;margin: 0;
             li {margin: 0;
-                a{position: relative;display: flex;align-items: center;height: var(--spc-4);padding: 0;text-decoration: none;
-
-                }
+                a{position: relative;display: flex;align-items: center;height: var(--spc-4);padding: 0;text-decoration: none;}
             }
         }
     }
@@ -21,4 +18,4 @@
     iframe{width: 250px;height: 250px;margin: 0 auto;}
 }
 
-.bottom-section{padding: 8px 0;background: var(--cl-py)}
+.bottom-section{padding: var(--spc-3) 0;background: var(--cl-py)}

@@ -14,10 +14,10 @@ export class ProductPageOpenComponent {
     public description: string = ''
 
     private menuListAll: object[] = [
-        {costumers: 1, category: 'sobremesas', delivery: true, photoUrl: 'assets/img/produtos/sobremesa-marquise-chocolat.avif', title: 'Marquise au Chocolat', description:'Um delicioso mousse de chocolate belga, aromatizado com café, cobertura de calda de cacau com mini trufas de chocolate.'},
-        {category: 'bebidas', delivery: true, photoUrl: null, title: 'Branco Moscato 200 ml', description:'Uma Taça de vinho da casa servida em uma elegante garrafinha de 200 ml.'},
-        {category: 'entradas', delivery: true, photoUrl: 'assets/img/produtos/entrada-burrata-bufula.avif', title: 'Burrata de Búfula', description: 'Burrata de búfula artesanal servida sobre uma cama de tomates cereja assados acompanhada de torradas e molho pesto.'},
-        {costumers: 1, category: 'principal', delivery: true, photoUrl: 'assets/img/produtos/principal-executive.avif', title: 'Executive: Steak de Carne com Batatas Fritas e Molho Secreto', description:'150 gramas de proteína, um suculento corte de carne nobre in natura (crua), grelhado à perfeição no ponto de sua preferência. Servido com batatas fritas e acompanhadas do nosso delicioso e exclusivo molho secreto 80 ml. - Relação Peso in natura x peso grelhado Batatas fritas 300 gramas (peso in natura) Steak de Carne 150 gramas de proteína in natura (crua). Todos os nossos produtos com descrição de peso, são pesados Crus (in natura) e sofrem alterações em seu peso e tamanho após ser grelhado, quanto mais passar o ponto, mais perderá a gramatura.'},
+        {category: 'estrutura1', photoUrl: 'assets/img/photo-1.avif', title: 'Lorem ipsum dolor sit', description: 'Nulla pulvinar urna vel massa tristique porta. Nullam laoreet bibendum libero ac tincidunt. Proin tincidunt at mauris in facilisis. Sed tempor velit ac fringilla porta. Mauris a iaculis augue, sit amet placerat elit. Proin id metus id sem dapibus gravida in quis est. Maecenas semper urna sed magna rutrum feugiat. Etiam eleifend feugiat dui. Ut interdum leo a metus sollicitudin placerat.'},
+        {category: 'estrutura2', photoUrl: 'assets/img/photo-1.avif', title: 'Lorem ipsum dolor sit', description: 'Nulla pulvinar urna vel massa tristique porta. Nullam laoreet bibendum libero ac tincidunt. Proin tincidunt at mauris in facilisis. Sed tempor velit ac fringilla porta. Mauris a iaculis augue, sit amet placerat elit. Proin id metus id sem dapibus gravida in quis est. Maecenas semper urna sed magna rutrum feugiat. Etiam eleifend feugiat dui. Ut interdum leo a metus sollicitudin placerat.'},
+        {category: 'emenda', photoUrl: 'assets/img/photo-1.avif', title: 'Lorem ipsum dolor sit', description: 'Nulla pulvinar urna vel massa tristique porta. Nullam laoreet bibendum libero ac tincidunt. Proin tincidunt at mauris in facilisis. Sed tempor velit ac fringilla porta. Mauris a iaculis augue, sit amet placerat elit. Proin id metus id sem dapibus gravida in quis est. Maecenas semper urna sed magna rutrum feugiat. Etiam eleifend feugiat dui. Ut interdum leo a metus sollicitudin placerat.'},
+        {category: 'suportemedidor', photoUrl: 'assets/img/photo-1.avif', title: 'Lorem ipsum dolor sit', description: 'Nulla pulvinar urna vel massa tristique porta. Nullam laoreet bibendum libero ac tincidunt. Proin tincidunt at mauris in facilisis. Sed tempor velit ac fringilla porta. Mauris a iaculis augue, sit amet placerat elit. Proin id metus id sem dapibus gravida in quis est. Maecenas semper urna sed magna rutrum feugiat. Etiam eleifend feugiat dui. Ut interdum leo a metus sollicitudin placerat.'},
     ];
 
     constructor(
@@ -36,7 +36,7 @@ export class ProductPageOpenComponent {
     }
 
     getDescription(): string {
-        const referArray: object = {entradas: 'Entradas', principal: 'Menu Principal', sobremesas: 'Sobremesas', bebidas: 'Bebidas'}
+        const referArray: object = {estrutura1: 'Estrutura 1', estrutura2: 'Estrutura 2', emenda: 'Emenda', suportemedidor: 'Suporte medidor'}
         return referArray[this.urlRefer] || '';
     }
 

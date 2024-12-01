@@ -7,6 +7,7 @@ import {HomePageComponent} from "./home/home-page/home-page.component";
 import {NotFoundPageComponent} from "./not-found/not-found-page/not-found-page.component";
 import {PrivacityPageComponent} from "./privacity/privacity-page/privacity-page.component";
 import {ProductPageComponent} from "./product/product-page/product-page.component";
+import {ProductPageOpenComponent} from "./product/product-page-open/product-page-open.component";
 import {QuotePageComponent} from "./quote/quote-page/quote-page.component";
 
 const routes: Routes = [
@@ -17,8 +18,16 @@ const routes: Routes = [
     {path: 'orcamento/',  component: QuotePageComponent},
     {path: 'privacidade',  component: PrivacityPageComponent},
     {path: 'privacidade/',  component: PrivacityPageComponent},
-    // {path: 'produtos', component: ProductPageComponent},
-    // {path: 'produtos/', component: ProductPageComponent},
+    {path: 'produtos', component: ProductPageComponent},
+    {path: 'produtos/', component: ProductPageComponent},
+    {path: 'produtos-estrutura1', component: ProductPageOpenComponent},
+    {path: 'produtos-estrutura1/', component: ProductPageOpenComponent},
+    {path: 'produtos-estrutura2', component: ProductPageOpenComponent},
+    {path: 'produtos-estrutura2/', component: ProductPageOpenComponent},
+    {path: 'produtos-emenda', component: ProductPageOpenComponent},
+    {path: 'produtos-emenda/', component: ProductPageOpenComponent},
+    {path: 'produtos-suportemedidor', component: ProductPageOpenComponent},
+    {path: 'produtos-suportemedidor/', component: ProductPageOpenComponent},
     {path: 'quemsomos', component: AboutPageComponent},
     {path: 'quemsomos/', component: AboutPageComponent},
     {path: '404', component: NotFoundPageComponent},

@@ -18,6 +18,10 @@ export class BreadcrumbComponent implements OnInit {
         produtos:  'Produtos',
         contato:  'Contato',
         orcamento:  'Orçamento',
+        estrutura1: 'Estrutura 1',
+        estrutura2: 'Estrutura 2',
+        emenda: 'Emenda',
+        suportemedidor: 'Suporte medidor',
     }
 
     constructor(

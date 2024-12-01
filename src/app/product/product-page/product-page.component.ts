@@ -19,10 +19,10 @@ export class ProductPageComponent {
     }
 
     public menuCategoryList: object[] = [
-        {url:'/produtos-entradas', title: 'Entradas'},
-        {url:'/produtos-principal', title: 'Menu Principal'},
-        {url:'/produtos-sobremesas', title: 'Sobremesas'},
-        {url:'/produtos-bebidas', title: 'Bebidas'},
+        {url: '/produtos-estrutura1', title: 'Estrutura 1'},
+        {url: '/produtos-estrutura2', title: 'Estrutura 2'},
+        {url: '/produtos-emenda', title: 'Emenda'},
+        {url: '/produtos-suportemedidor', title: 'Suporte medidor'},
     ]
 
 }

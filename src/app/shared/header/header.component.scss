@@ -13,7 +13,6 @@ nav{
             a{position: relative;display: flex;align-items: center;color: var(--cl-style-lt);height: var(--spc-6);padding: 0 var(--spc-1);text-decoration: none;
                 &.active{padding: 0 calc(var(--spc-1) - 1px);}
                 &:hover{color: var(--cl-sy)}
-                //&.active::after{content: "";position: absolute;left: 0;bottom: 0;width: 100%;height: 4px;background-color: var(--cl-py);}
             }
             &:last-child{margin-right: 0}
         }
@@ -27,10 +26,11 @@ nav{
 @media (max-width: 1010px) {
     header{position: relative}
     nav{position: absolute;top: -1000%;right: 0;width: max(50%, 332px);transition: top .5s;z-index: -1;
-        ul{display: block; background-color: var(--cl-style-lt);padding-left: var(--spc-2);
-            li{margin: 0;
-                a{padding-left: var(--spc-3);
-                    &.active::after{width: 4px;height: 100%;}
+        ul{display: block; background-color: var(--cl-ty);padding-left: var(--spc-2);
+            li{margin:var(--spc-1) 0;
+                a{padding-left: var(--spc-2);
+                    &.active{padding-left: var(--spc-3);}
+                    &.active::after{content: "";position: absolute;left: 0;bottom: 0;width: 2px;;height: 100%;background-color: var(--cl-style-lt);}
                 }
             }
         }
