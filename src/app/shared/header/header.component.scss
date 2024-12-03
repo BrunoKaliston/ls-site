@@ -1,10 +1,10 @@
-header{background-color: var(--cl-py);
+header{background-color: var(--cl-ty);
     &.home-page{background: none;}
     .container{min-height: 88px;}
 }
 .logo-box, nav, .aux-box{width: 100%;}
 .logo-box{max-width: 80px;
-    a{background: url(../../../assets/img/logo-lt.avif) no-repeat 50%;background-size: contain;width: 110px;aspect-ratio: 39 / 20;}
+    a{background: url(../../../assets/img/logo.avif) no-repeat 50%;background-size: contain;width: 117px;aspect-ratio: 39 / 20;}
 }
 .aux-box .btn-mob{display: inline-flex}
 nav{

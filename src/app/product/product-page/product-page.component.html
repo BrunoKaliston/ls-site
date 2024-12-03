@@ -1,15 +1,5 @@
 <div class="container flex center">
     <app-breadcrumb class="mt-6 mb-6" [color]="'cl-style-dk'"></app-breadcrumb>
 </div>
-<div class="product-section">
-    <div class="container">
-        <div class="content slide-up-list">
-            <div *ngFor="let category of menuCategoryList" [routerLink]="[category['url']]" class="item bg-cl-py pointer">
-                <div class="txt-box">
-                    <h2 class="font-title-sm cl-style-lt">{{category['title']}}</h2>
-                    <span class="cl-style-lt font-up">Visualizar</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+<app-product-section></app-product-section>

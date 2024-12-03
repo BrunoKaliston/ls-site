@@ -1,0 +1,5 @@
+<owl-carousel-o [options]="carouselOptions" class="fade-in">
+    <ng-template *ngFor="let photo of photoList" carouselSlide>
+        <div *ngIf="photo['imgSrc']" class="photo" style="--bg-image: url({{photo['imgSrc']}})"></div>
+    </ng-template>
+</owl-carousel-o>

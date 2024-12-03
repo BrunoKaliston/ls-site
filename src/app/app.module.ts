@@ -13,6 +13,7 @@ import {NotFoundModule} from "./not-found/not-found.module";
 import {PrivacityModule} from "./privacity/privacity.module";
 import {QuoteModule} from "./quote/quote.module";
 import {SharedModule} from "./shared/shared.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import {SharedModule} from "./shared/shared.module";
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         AboutModule,
         ContactModule,

@@ -18,11 +18,4 @@ export class ProductPageComponent {
         this.title.setTitle("LS estruturas solares | Produtos - visualizar")
     }
 
-    public menuCategoryList: object[] = [
-        {url: '/produtos-estrutura1', title: 'Estrutura 1'},
-        {url: '/produtos-estrutura2', title: 'Estrutura 2'},
-        {url: '/produtos-emenda', title: 'Emenda'},
-        {url: '/produtos-suportemedidor', title: 'Suporte medidor'},
-    ]
-
 }

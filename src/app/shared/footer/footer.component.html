@@ -1,14 +1,14 @@
 <div class="footer">
     <div class="container">
         <div class="content-box">
-            <div class="item">
+            <div class="item slide-up-list">
                 <h2 class="font-bold mb-2">LS Estruturas Solares</h2>
                 <p>Rua Procópio Rodrigues da Silva, 340, São Sebastião, São Miguel do Oeste - SC</p>
             </div>
             <div class="item">
                 <h2 class="font-bold mb-2">Navegação</h2>
                 <nav>
-                    <ul>
+                    <ul class="slide-up-list">
                         <li *ngFor="let item of menuList; let index = index">
                             <h2>
                                 <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer" [title]="item['title']">{{item['title']}}</a>
@@ -18,18 +18,18 @@
                     </ul>
                 </nav>
             </div>
-            <div class="item">
+            <div class="item slide-up-list">
                 <h2 class="font-bold mb-2">Atendimento</h2>
-                <div class="btn-box flex start slide-up-list mb-5">
+                <div class="btn-box flex start mb-5">
                     <a target="_blank" [href]="'https://api.whatsapp.com/send?phone=5549991374038'" class="flex font-up pointer mr-1" (mouseover)="setColor('cl-sy')" (mouseleave)="setColor('cl-style-lt')" aria-label="whatsapp" #anchor><app-svg class="mr-1" [color]="getColor()" [svgReference]="'whatsapp'"></app-svg> (49) 99137-4038</a>
                 </div>
                 <h2 class="font-bold mb-2">Rede Sociais</h2>
-                <div class="btn-box flex start slide-up-list">
+                <div class="btn-box flex start">
                     <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex font-up pointer mr-1" aria-label="instagram"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'instagram'"></app-svg></a>
                     <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex font-up pointer" aria-label="facebook"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'facebook'"></app-svg></a>
                 </div>
             </div>
-            <div class="item">
+            <div class="item slide-up-list">
                 <h2 class="font-bold mb-2">Mapa</h2>
                 <div class="map-box fade-in">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3563.82505101364!2d-53.5153329!3d-26.7180355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fa5c5736ee4c43%3A0xb48d779392115608!2sR.%20Proc%C3%B3pio%20Rodrigues%20da%20Silva%2C%20340%20-%20S%C3%A3o%20Sebastiao%2C%20S%C3%A3o%20Miguel%20do%20Oeste%20-%20SC%2C%2089900-000!5e0!3m2!1spt-BR!2sbr!4v1732988338262!5m2!1spt-BR!2sbr" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
