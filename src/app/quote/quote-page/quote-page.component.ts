@@ -11,7 +11,7 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class QuotePageComponent {
 
-    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer_quote.php'
+    private mailerRouter: string = 'https://lsestruturassolares.com.br.aqis.com.br/mailer_quote.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;
@@ -73,8 +73,12 @@ export class QuotePageComponent {
             alert('Telefone não informado.')
             return false;
         }
+        if (this.contactForm.get('cnpj').value == null) {
+            alert('Telefone não informado.')
+            return false;
+        }
         if (this.contactForm.get('subject').value == null) {
-            alert('Selecione um assunto.')
+            alert('Assuno não informado.')
             return false;
         }
         if (this.contactForm.get('message').value == null) {

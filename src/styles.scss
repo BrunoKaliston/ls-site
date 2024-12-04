@@ -49,9 +49,9 @@ h1, h2, h3, h4, p, span, label, a, button, input, select, textarea, *{font-famil
 h1, h2, h3, h4, p, span, label, a, button, input, select, textarea{font-size: 16px;}
 *::placeholder{font-family: 'montserratregular', sans-serif;font-style: normal;margin: 0;font-weight: 400;}
 ::-webkit-scrollbar{display: block;width: 11px;}
-::-webkit-scrollbar-track{background: var(--cl-sy);}
-::-webkit-scrollbar-thumb{background: var(--cl-py);}
-::-webkit-scrollbar-thumb:hover{background: var(--cl-ty);}
+::-webkit-scrollbar-track{background: var(--cl-md);}
+::-webkit-scrollbar-thumb{background: var(--cl-ty);}
+::-webkit-scrollbar-thumb:hover{background: var(--cl-py);}
 ::placeholder{color: var(--cl-black);font-size: 14px}
 img {width: auto;max-width: 100%;height: auto;}
 

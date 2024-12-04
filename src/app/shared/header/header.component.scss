@@ -10,7 +10,8 @@ header{background-color: var(--cl-ty);
 nav{
     ul {display: flex; align-items: center; justify-content: flex-end;list-style: none;padding: var(--spc-2) 0;margin: 0;
         li {margin-right: var(--spc-1);
-            a{position: relative;display: flex;align-items: center;color: var(--cl-style-lt);height: var(--spc-6);padding: 0 var(--spc-1);text-decoration: none;
+            a{position: relative;display: flex;align-items: center;color: var(--cl-style-lt);height: var(--spc-5);padding: 0 var(--spc-1);text-decoration: none;
+                &.df-btn{width: fit-content;padding: 0 var(--spc-2);}
                 &.active{padding: 0 calc(var(--spc-1) - 1px);}
                 &:hover{color: var(--cl-sy)}
             }

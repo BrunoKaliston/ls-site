@@ -14,13 +14,15 @@
             <ul>
                 <li *ngFor="let item of menuList; let index = index">
                     <h2>
-                        <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
-                        <a *ngIf="item['externalUrl']" target="_blank" [href]="item['externalUrl']" class="pointer {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
+                        <a *ngIf="!item['externalUrl']" [routerLink]="item['url']" [href]="item['url']" class="pointer {{item['btnOn'] ? 'df-btn' : ''}} {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
+                        <a *ngIf="item['externalUrl']" target="_blank" [href]="item['externalUrl']" class="pointer {{item['btnOn'] ? 'df-btn' : ''}} {{getCurrentPageIndex() == index ? 'active font-bold' : ''}}" [title]="item['title']">{{item['title']}}</a>
                     </h2>
                 </li>
             </ul>
         </nav>
         <div class="aux-box flex end">
+            <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex font-up pointer mr-1" aria-label="instagram"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'instagram'"></app-svg></a>
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex font-up pointer" aria-label="facebook"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-lt'" [svgReference]="'facebook'"></app-svg></a>
             <div *ngIf="isMobilePage()" #btnMob class="btn-mob">
                 <app-svg [svgReference]="'hamburger'" [size]="40" [color]="'cl-style-lt'"></app-svg>
             </div>

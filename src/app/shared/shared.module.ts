@@ -10,6 +10,7 @@ import {PhotoSectionComponent} from "./photo-section/photo-section.component";
 import {ProductSectionComponent} from "./product-section/product-section.component";
 import {SvgComponent} from './svg/svg.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
+import {WhatsHopperComponent} from "./whats-hopper/whats-hopper.component";
 
 @NgModule({
     declarations: [
@@ -18,7 +19,8 @@ import {CarouselModule} from "ngx-owl-carousel-o";
         HeaderComponent,
         PhotoSectionComponent,
         ProductSectionComponent,
-        SvgComponent
+        SvgComponent,
+        WhatsHopperComponent
     ],
     exports: [
         HeaderComponent,
@@ -26,7 +28,8 @@ import {CarouselModule} from "ngx-owl-carousel-o";
         SvgComponent,
         BreadcrumbComponent,
         ProductSectionComponent,
-        PhotoSectionComponent
+        PhotoSectionComponent,
+        WhatsHopperComponent
     ],
     imports: [
         CommonModule,

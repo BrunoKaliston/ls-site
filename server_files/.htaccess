@@ -3,8 +3,8 @@ RewriteBase /
 RewriteCond expr "tolower(%{REQUEST_URI}) =~ /(.*)/"
 RewriteRule [A-Z] %1 [R=301,L]
 RewriteCond %{HTTP_HOST} ^www.lsestruturassolares.aqis.com.br$ [NC]
-RewriteRule ^(.*)$ https://lsestruturassolares.aqis.com.br/$1 [R=301,L]
-ErrorDocument 404 https://lsestruturassolares.aqis.com.br/404
+RewriteRule ^(.*)$ https://lsestruturassolares.com.br.aqis.com.br/$1 [R=301,L]
+ErrorDocument 404 https://lsestruturassolares.com.br.aqis.com.br/404
 
 <FilesMatch "\.(?i:js|css|avif|woff2|svg|ico|swf)$">
   <IfModule mod_headers.c>

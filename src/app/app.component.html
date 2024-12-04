@@ -3,4 +3,6 @@
   <router-outlet></router-outlet>
 </div>
 <app-footer *ngIf="!pageNotFound()"></app-footer>
-<app-svg *ngIf="showScrollUp()" [svgReference]="'caretUp'" (click)="scrollUp()" [size]="24" [color]="'cl-ty'" class="scroll-top-icon flex center pointer"></app-svg>
+<app-svg *ngIf="showScrollUp()" [svgReference]="'caretUp'" (click)="scrollUp()" [size]="24" [color]="'cl-sy'" class="scroll-top-icon flex center pointer"></app-svg>
+<app-whats-hopper></app-whats-hopper>
+<!--<app-cookie-consent></app-cookie-consent>-->

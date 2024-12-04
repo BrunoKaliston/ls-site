@@ -1,0 +1,30 @@
+#contact-messenger {position: fixed;bottom: 100px;right: 15px;}
+#contact-messenger img {width: 60px;}
+#contact-whatsapp {position: fixed;bottom: 50px;right: 0;border-radius: 10px 0 0 10px;padding: 10px;z-index: 999;}
+#contact-whatsapp img {width: 60px;}
+#contact-whatsapp span {color: #FFF;}
+#contact-whatsapp:hover,
+#contact-whatsapp:active,
+#contact-whatsapp:focus {text-decoration: none;}
+#contact-whatsapp.whatsMobile {position: relative;margin: 10px auto;display: block;width: 100%;background: red;border-radius: 0 10px 10px 0;}
+#contact-whatsapp .animated {animation: bounce .1s infinite ease-in-out;-webkit-animation: bounce .1s infinite ease-in-out;-moz-animation: bounce .1s infinite ease-in-out;}
+
+@keyframes bounce {
+    0%,
+    20%,
+    60%,
+    100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    80% {transform: translateY(-10px);}
+}
+
+#contact-whatsapp .bounce {animation-name: bounce;}
+#contact-whatsapp .pulse {display: block;border-radius: 50%;cursor: pointer;box-shadow: 0 0 0 rgba(0, 144, 69, 0.4);animation: pulse 2s infinite;-webkit-animation: pulse 2s infinite;-moz-animation: pulse 2s infinite;}
+#contact-whatsapp .pulse:hover {animation: none;}
+
+@keyframes pulse {
+    0% {box-shadow: 0 0 0 0 rgba(0, 144, 69, 0.4);}
+    70% {box-shadow: 0 0 0 10px rgba(0, 144, 69, 0);}
+    100% {box-shadow: 0 0 0 0 rgba(0, 144, 69, 0);}
+}
+.bounce {animation: bounce 2s infinite;}

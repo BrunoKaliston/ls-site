@@ -43,8 +43,8 @@ try {
     $mail->isSMTP();                    // Send using SMTP
     $mail->Host = 'smtp.gmail.com';     // Set the SMTP server to send through
     $mail->SMTPAuth = true;             // Enable SMTP authentication
-    $mail->Username = 'hexah.emails@gmail.com'; // SMTP username
-    $mail->Password = 'PYEGj#sH4"@-(%nX9r';     // SMTP password
+    $mail->Username = 'email@brunokaliston.com'; // SMTP username
+    $mail->Password = 'KL,bd7i=xZ[i';     // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port = 465;                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 
@@ -54,9 +54,8 @@ try {
 //    $mail->setFrom($email, $name);
 //    $mail->addAddress($email, 'Site - restaurante');
 
-//    $to = "bruno@hexah.com.br"; //Enviar para
-    $to = "marketing@lsestruturassolares.aqis.com.br"; //Enviar para
-    $mail->AddAddress($to);
+    $mail->AddAddress("bruno.kaliston@hexah.com.br");//Enviar para
+    $mail->AddAddress("dev@hexah.com.br");//Enviar para
     $mail->Subject = $subject; //Assunto
     $mail->WordWrap = 80; // set word wrap
 
