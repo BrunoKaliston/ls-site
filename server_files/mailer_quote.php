@@ -43,12 +43,12 @@ try {
     $body .= "----------------------------";
 
     $mail->isSMTP();                    // Send using SMTP
-    $mail->Host = 'smtp.gmail.com';     // Set the SMTP server to send through
+    $mail->Host = 'mail.brunokaliston.com.br';     // Set the SMTP server to send through
     $mail->SMTPAuth = true;             // Enable SMTP authentication
     $mail->Username = 'email@brunokaliston.com'; // SMTP username
     $mail->Password = 'KL,bd7i=xZ[i';     // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port = 465;                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port = 465;
 
     $mail->IsSendmail();
 

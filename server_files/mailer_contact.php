@@ -40,11 +40,21 @@ try {
     $body .= "<b>message: </b> $message <br/>";
     $body .= "----------------------------";
 
+//    $mail->isSMTP();                    // Send using SMTP
+//    $mail->Host = 'mail.aqis.com.br';     // Set the SMTP server to send through
+//    $mail->SMTPAuth = true;             // Enable SMTP authentication
+//    $mail->Username = 'email@aqis.com.br'; // SMTP username
+//    $mail->Password = '2&lW&AV.&*}w';     // SMTP password
+//    $mail->SMTPSecure = null;
+//    $mail->Port = 587;
+//    $mail->Username = 'acqua@aqis.com.br'; // SMTP username
+//    $mail->Password = 'azXHEJ]e}Nl4';     // SMTP password
+
     $mail->isSMTP();                    // Send using SMTP
     $mail->Host = 'smtp.gmail.com';     // Set the SMTP server to send through
     $mail->SMTPAuth = true;             // Enable SMTP authentication
-    $mail->Username = 'email@brunokaliston.com'; // SMTP username
-    $mail->Password = 'KL,bd7i=xZ[i';     // SMTP password
+    $mail->Username = 'hexah.emails@gmail.com'; // SMTP username
+    $mail->Password = 'PYEGj#sH4"@-(%nX9r';     // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port = 465;                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 
@@ -54,7 +64,7 @@ try {
 //    $mail->setFrom($email, $name);
 //    $mail->addAddress($email, 'Site - restaurante');
 
-    $mail->AddAddress("bruno.kaliston@hexah.com.br");//Enviar para
+//    $mail->AddAddress("bruno.kaliston@hexah.com.br");//Enviar para
     $mail->AddAddress("dev@hexah.com.br");//Enviar para
     $mail->Subject = $subject; //Assunto
     $mail->WordWrap = 80; // set word wrap

@@ -2,9 +2,23 @@
     <app-breadcrumb class="mt-6 mb-6" [color]="'cl-style-dk'"></app-breadcrumb>
 </div>
 <div class="contact-section">
-    <div class="container flex center">
-        <div class="content txt-center">
+    <div class="container flex center b top">
+        <div class="text-box slide-up-list">
             <h1 class="font-title-lg cl-style-dk mb-3">Orçamento</h1>
+            <p class="mb-3">Preencha os dados no formulário e um de nossos consultores entrará em contato</p>
+            <a target="_blank" [href]="'https://api.whatsapp.com/send?phone=5549991374038'" class="df-btn-green font-uni-sm font-up pointer" title="Whatsapp">Whatsapp</a>
+<!--            <h2 class="font-bold font-size-lg mb-2">Atendimento</h2>-->
+<!--            <div class="btn-box flex start mb-3">-->
+<!--                <a target="_blank" [href]="'https://api.whatsapp.com/send?phone=5549991374038'" class="flex font-up pointer mr-1"  aria-label="whatsapp" #anchor><app-svg class="mr-1" [svgReference]="'whatsapp'"></app-svg> (49) 99137-4038</a>-->
+<!--            </div>-->
+<!--            <h2 class="font-bold font-size-lg mb-2">Rede Sociais</h2>-->
+<!--            <div class="btn-box flex start">-->
+<!--                <a target="_blank" href="https://www.instagram.com/lsestruturasolares/" class="flex font-up pointer mr-1" aria-label="instagram"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-dk'" [svgReference]="'instagram'"></app-svg></a>-->
+<!--                <a target="_blank" href="https://www.facebook.com/profile.php?id=100085333474249" class="flex font-up pointer" aria-label="facebook"><app-svg [hoverColor]="'cl-sy'" [color]="'cl-style-dk'" [svgReference]="'facebook'"></app-svg></a>-->
+<!--            </div>-->
+        </div>
+        <div class="content txt-center">
+            <h2 class="font-bold font-size-lg mb-3 mt-3">Vamos conversar</h2>
             <div class="form-box mt-3 slide-left-list" [formGroup]="contactForm">
                 <div class="flex mb-3">
                     <input placeholder="Nome" [formControlName]="'name'" type="text" onClick="this.select();">

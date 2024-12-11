@@ -1,14 +1,7 @@
 <header class="{{getHeaderClass()}}">
     <div class="container flex fade-in">
         <div class="logo-box">
-
-            <a [routerLink]="['/']" [href]="'/'" class="block" [title]="'Página inícial'" aria-label="Página inícial">
-<!--                <app-svg [svgReference]="'logo'" [size]="100" [customHeight]="true" [color]="'-'"></app-svg>-->
-            </a>
-
-<!--            <a [routerLink]="['/']" [href]="'/'" class="block" [title]="'Página inícial'" aria-label="Página inícial">-->
-<!--                <app-svg [svgReference]="'logo'" [width]="80" [color]="'-'"></app-svg>-->
-<!--            </a>-->
+            <a [routerLink]="['/']" [href]="'/'" class="block" [title]="'Página inícial'" aria-label="Página inícial"></a>
         </div>
         <nav #nav class="{{menuIsActive() ? 'active' : ''}}">
             <ul>

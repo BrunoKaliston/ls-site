@@ -30,11 +30,13 @@
     --spc-4: 32px;
     --spc-5: 40px;
     --spc-6: 48px;
+    --spc-8: 64px;
 
     --cl-bg: #eef0f3;
     --cl-header: #242e47;
     --cl-py: #2E3193;
     --cl-sy: #F48020;
+    --cl-green: #0acfa9;
     --cl-ty: #1C2228;
     --cl-ty-lt: #59c0ff;
     --cl-style-dk: #1c1c1c;
@@ -154,6 +156,7 @@ html{position: relative;height: inherit;min-height: 100%;
 
 [class*="df-btn"]{@extend .flex-in;height: var(--spc-5);white-space: nowrap;padding: 0 var(--spc-2);border-radius: 100px;background-color: var(--cl-py);color: var(--cl-style-lt);border: none;cursor: pointer;
     &[class*="btn-sy"]{background-color: var(--cl-sy);}
+    &[class*="btn-green"]{background-color: var(--cl-green);}
     &[class*="-square"]{border-radius: 0;}
     &[class*="-shadow"]{box-shadow: 0 3px 2px 1px rgba(0, 0, 0, 0.3);}
 }

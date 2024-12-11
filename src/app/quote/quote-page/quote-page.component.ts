@@ -51,6 +51,7 @@ export class QuotePageComponent {
 
         this.postEmail(this.contactForm.value,(response) => {
             if (!response.error) {
+                console.log(response)
                 alert('Seus dados foram enviados com sucesso.');
                 this.resetForm();
             } else {
