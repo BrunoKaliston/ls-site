@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
         private headService: HeadService
     ) {
         this.meta.updateTag({property:"author", content:"Hexah Digital - https://www.hexah.com.br"});
-        this.meta.updateTag({rel:"canonical", content: 'https://lsestruturassolares.com.br.aqis.com.br'})
+        this.meta.updateTag({rel:"canonical", content: 'https://lsestruturassolares.aqis.com.br'})
         this.meta.updateTag({property:"copyright", content: "LS estruturas solares - 2025"});
         this.meta.updateTag({property:"googlebot", content:"INDEX, FOLLOW"});
         this.meta.updateTag({property:"robots", content:"INDEX, FOLLOW"});

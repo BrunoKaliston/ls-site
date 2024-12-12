@@ -22,6 +22,7 @@ $subject = $requestData['subject']; //filter_input(INPUT_POST, 'subject');
 $message = $requestData['message']; //filter_input(INPUT_POST, 'message');
 $cnpj = $requestData['cnpj']; //filter_input(INPUT_POST, 'message');
 
+
 if (empty($name) || empty($email) || empty($subject) || empty($message) || empty($cnpj)) {
     header("HTTP/1.1 401");
     echo "Campos obrigátorios não preenchidos";
@@ -38,35 +39,33 @@ try {
     $body .= "<b>Nome: </b> $name <br/>";
     $body .= "<b>E-mail: </b> $email <br/>";
     $body .= "<b>Telefone: </b> $phone <br/>";
-    $body .= "<b>message: </b> $message <br/>";
     $body .= "<b>CNPJ: </b> $cnpj <br/>";
+    $body .= "<b>message: </b> $message <br/>";
     $body .= "----------------------------";
 
     $mail->isSMTP();                    // Send using SMTP
-    $mail->Host = 'mail.brunokaliston.com.br';     // Set the SMTP server to send through
+    $mail->Host = 'mail.aqis.com.br';     // Set the SMTP server to send through
     $mail->SMTPAuth = true;             // Enable SMTP authentication
-    $mail->Username = 'email@brunokaliston.com'; // SMTP username
-    $mail->Password = 'KL,bd7i=xZ[i';     // SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-    $mail->Port = 465;
+    $mail->Username = 'email@aqis.com.br'; // SMTP username
+    $mail->Password = '[FBnIMRA4{~z}.&5';     // SMTP password
+    $mail->SMTPSecure = 'tls';// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port = 587;        // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+//    $mail->SMTPDebug = 2;
+//    $mail->IsSendmail();
 
-    $mail->IsSendmail();
-
-//    $mail->AddReplyTo($email, $name); //Responder para..
-//    $mail->setFrom($email, $name);
-//    $mail->addAddress($email, 'Site - restaurante');
-
-    $mail->AddAddress("bruno.kaliston@hexah.com.br");//Enviar para
-    $mail->AddAddress("dev@hexah.com.br");//Enviar para
-    $mail->Subject = $subject; //Assunto
+    $mail->From = 'email@aqis.com.br';
+    $mail->FromName = 'HEXAH DIGITAL';
+    $mail->AddAddress("bruno.kaliston@hotmail.com");//Enviar para
+    $mail->Subject = mb_convert_encoding($subject, "UTF-8", "auto"); //Assunto
+    $mail->CharSet = 'UTF-8';
     $mail->WordWrap = 80; // set word wrap
 
     $mail->MsgHTML($body);
     $mail->IsHTML(true); // send as HTML
     $mail->Send();
 
-    return ['msg' => 'Criado com sucesso', 'status' => 201]; //retorno devolvido para caso sucesso
-//    echo 'Mensagem enviada com sucesso.'; //retorno devolvido para caso sucesso
+    return ['msg' => 'Enviado com sucesso', 'status' => 201]; //retorno devolvido para caso sucesso
+
 } catch (\PHPMailer\PHPMailer\Exception $e) {
     header("HTTP/1.1 401");
     return ['msg' => "Erro ao enviar email", 'status' => 401];

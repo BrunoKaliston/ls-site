@@ -11,7 +11,7 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class ContactPageComponent {
 
-    private mailerRouter: string = 'https://lsestruturassolares.com.br.aqis.com.br/mailer_contact.php'
+    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer_contact.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;
@@ -53,9 +53,11 @@ export class ContactPageComponent {
 
         this.postEmail(this.contactForm.value,(response) => {
             if (!response.error) {
+                console.log(response)
                 alert('Seus dados foram enviados com sucesso.');
                 this.resetForm();
             } else {
+                console.log(response)
                 alert('Não foi possivel enviar os dados agora, por favor tente novamente mais tarde.');
             }
             this.sending = false

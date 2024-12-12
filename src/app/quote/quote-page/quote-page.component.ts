@@ -11,7 +11,7 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class QuotePageComponent {
 
-    private mailerRouter: string = 'https://lsestruturassolares.com.br.aqis.com.br/mailer_quote.php'
+    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer_quote.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;
@@ -55,6 +55,8 @@ export class QuotePageComponent {
                 alert('Seus dados foram enviados com sucesso.');
                 this.resetForm();
             } else {
+                console.log('emails')
+                console.log(response)
                 alert('Não foi possivel enviar os dados agora, por favor tente novamente mais tarde.');
             }
             this.sending = false
