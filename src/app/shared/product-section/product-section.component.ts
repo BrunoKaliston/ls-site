@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 
 @Component({
@@ -6,7 +6,9 @@ import {Router} from "@angular/router";
   templateUrl: './product-section.component.html',
   styleUrls: ['./product-section.component.scss']
 })
-export class ProductSectionComponent {
+export class ProductSectionComponent implements OnChanges{
+
+    @Input() home: boolean = false
 
     public menuCategoryList: object[] = [
         {url: '/orcamento', title: 'Estrutura 1'},
@@ -16,5 +18,9 @@ export class ProductSectionComponent {
     ]
 
     constructor() {}
+
+    ngOnChanges() {
+        if (this.home) {this.menuCategoryList.splice(2,2)}
+    }
 
 }

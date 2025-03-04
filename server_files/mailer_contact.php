@@ -49,8 +49,8 @@ try {
     $mail->Port = 587;                  // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 
     $mail->From = 'email@aqis.com.br';
-    $mail->FromName = 'HEXAH DIGITAL';
-    $mail->AddAddress("bruno.kaliston@hotmail.com");//Enviar para
+    $mail->FromName = 'LS ESTRUTURAS - CONTATO SITE';
+    $mail->AddAddress("contato@lsestruturassolares.com.br");//Enviar para
     $mail->Subject = mb_convert_encoding($subject, "UTF-8", "auto"); //Assunto
     $mail->CharSet = 'UTF-8';
     $mail->WordWrap = 80; // set word wrap

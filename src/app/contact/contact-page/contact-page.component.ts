@@ -3,6 +3,7 @@ import {Meta, Title} from "@angular/platform-browser";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ValidService} from "../../services/valid/valid.service";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-menu-page',
@@ -11,13 +12,14 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class ContactPageComponent {
 
-    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer_contact.php'
+    private mailerRouter: string = 'https://lsestruturassolares.com.br/mailer_contact.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;
 
     constructor(
         private formBuilder: FormBuilder,
+        private router: Router,
         private http: HttpClient,
         private meta: Meta,
         private validService: ValidService,
@@ -37,12 +39,9 @@ export class ContactPageComponent {
         });
     }
 
-
     resetForm(): void {
         this.contactForm.reset();
     }
-
-
 
     sendMail() {
         this.sending = true;
@@ -53,8 +52,7 @@ export class ContactPageComponent {
 
         this.postEmail(this.contactForm.value,(response) => {
             if (!response.error) {
-                console.log(response)
-                alert('Seus dados foram enviados com sucesso.');
+                this.router.navigate(['/enviadocomsucesso'],{state:{success: '1'}})
                 this.resetForm();
             } else {
                 console.log(response)

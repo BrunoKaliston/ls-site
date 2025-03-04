@@ -1,13 +1,14 @@
 .product-section{padding: var(--spc-4) 0 80px;
     .content{display: grid;grid-template-columns: repeat(auto-fill, 285px);justify-content: center;
+        &.g2{grid-template-columns: repeat(auto-fill, 570px);}
         .item{margin: 0 0 var(--spc-3);transition: ease .3s;
             *{transition: ease .1s}
             .txt-box{width: 100%;padding: var(--spc-2)}
             &::before{content: "";display: block;width: 100%;max-width: 100%;aspect-ratio: 1 / 1;margin-right: var(--spc-1);}
             &:nth-child(1)::before{background: url("../../../assets/img/photo-1.avif") no-repeat 50%;background-size: cover;}
-            &:nth-child(2)::before{background: url("../../../assets/img/photo-1.avif") no-repeat 50%;background-size: cover;}
-            &:nth-child(3)::before{background: url("../../../assets/img/photo-1.avif") no-repeat 50%;background-size: cover;}
-            &:nth-child(4)::before{background: url("../../../assets/img/photo-1.avif") no-repeat 50%;background-size: cover;}
+            &:nth-child(2)::before{background: url("../../../assets/img/photo-2.avif") no-repeat 50%;background-size: cover;}
+            &:nth-child(3)::before{background: url("../../../assets/img/photo-4.avif") no-repeat 50%;background-size: cover;}
+            &:nth-child(4)::before{background: url("../../../assets/img/photo-7.avif") no-repeat 50%;background-size: cover;}
             &:hover {box-shadow: 0 0 8px rgba(0, 0, 0, 0.9);z-index: 1;}
             &:hover::before{filter: brightness(0.9);transition: ease .3s;}
             //&:hover {box-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);z-index: 1;}

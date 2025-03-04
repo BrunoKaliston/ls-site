@@ -54,8 +54,8 @@ try {
 //    $mail->IsSendmail();
 
     $mail->From = 'email@aqis.com.br';
-    $mail->FromName = 'HEXAH DIGITAL';
-    $mail->AddAddress("bruno.kaliston@hotmail.com");//Enviar para
+    $mail->FromName = 'LS ESTRUTURAS - ORÇAMENTO SITE';
+    $mail->AddAddress("contato@lsestruturassolares.com.br");//Enviar para
     $mail->Subject = mb_convert_encoding($subject, "UTF-8", "auto"); //Assunto
     $mail->CharSet = 'UTF-8';
     $mail->WordWrap = 80; // set word wrap
@@ -68,5 +68,5 @@ try {
 
 } catch (\PHPMailer\PHPMailer\Exception $e) {
     header("HTTP/1.1 401");
-    return ['msg' => "Erro ao enviar email", 'status' => 401];
+    return ['error' => $e, 'msg' => "Erro ao enviar email", 'status' => 401];
 }

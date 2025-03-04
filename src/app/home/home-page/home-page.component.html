@@ -41,7 +41,10 @@
 </div>
 <div class="product-section">
     <h2 class="font-display-sm txt-center font-up mb-5 fade-in">Nossos Produtos</h2>
-    <app-product-section></app-product-section>
+    <app-product-section [home]="true"></app-product-section>
+    <div class="flex center">
+        <a [routerLink]="['/produtos']" [href]="'/produtos'" class="df-btn-sy font-uni-sm font-up pointer" title="Veja mais">Veja mais</a>
+    </div>
 </div>
 <div class="contact-section">
     <div class="container">

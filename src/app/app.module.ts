@@ -14,6 +14,7 @@ import {PrivacityModule} from "./privacity/privacity.module";
 import {QuoteModule} from "./quote/quote.module";
 import {SharedModule} from "./shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {FormSentModule} from "./form-sent/form-sent.module";
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
         AppRoutingModule,
         AboutModule,
         ContactModule,
+        FormSentModule,
         HomeModule,
         ProductModule,
         NotFoundModule,

@@ -3,6 +3,7 @@ import {Meta, Title} from "@angular/platform-browser";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {ValidService} from "../../services/valid/valid.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-quote-page',
@@ -11,13 +12,14 @@ import {ValidService} from "../../services/valid/valid.service";
 })
 export class QuotePageComponent {
 
-    private mailerRouter: string = 'https://lsestruturassolares.aqis.com.br/mailer_quote.php'
+    private mailerRouter: string = 'https://lsestruturassolares.com.br/mailer_quote.php'
 
     public contactForm: FormGroup;
     public sending: boolean = false;
 
     constructor(
         private formBuilder: FormBuilder,
+        private router: Router,
         private http: HttpClient,
         private meta: Meta,
         private validService: ValidService,
@@ -51,12 +53,9 @@ export class QuotePageComponent {
 
         this.postEmail(this.contactForm.value,(response) => {
             if (!response.error) {
-                console.log(response)
-                alert('Seus dados foram enviados com sucesso.');
+                this.router.navigate(['/enviadocomsucesso'],{state:{success: '1'}})
                 this.resetForm();
             } else {
-                console.log('emails')
-                console.log(response)
                 alert('Não foi possivel enviar os dados agora, por favor tente novamente mais tarde.');
             }
             this.sending = false
