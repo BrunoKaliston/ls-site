@@ -55,7 +55,7 @@ try {
 
     $mail->From = 'email@aqis.com.br';
     $mail->FromName = 'LS ESTRUTURAS - ORÇAMENTO SITE';
-    $mail->AddAddress("contato@lsestruturassolares.com.br");//Enviar para
+    $mail->AddAddress("comercial@lsestruturassolares.com.br");//Enviar para
     $mail->Subject = mb_convert_encoding($subject, "UTF-8", "auto"); //Assunto
     $mail->CharSet = 'UTF-8';
     $mail->WordWrap = 80; // set word wrap

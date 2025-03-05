@@ -17,8 +17,12 @@ export class FormSentPageComponent {
         private title: Title
     ) {
         const navigation = this.router.getCurrentNavigation();
-        if (!navigation || !navigation.extras || !navigation.extras.state && navigation.extras.state['success'] != 1) {
-            this.locationNav.back();
+        if ((!navigation || !navigation.extras || !navigation.extras.state)) {
+            this.router.navigate(['/']);
+        }
+        const state = navigation.extras.state
+        if (state == null || state['success'] == null || state['success'] != 1) {
+            this.router.navigate(['/']);
         }
         this.meta.updateTag({name:"description", content:"LS estruturas solares | Mensagem enviada com Sucesso! Em breve entraremos em contato."})
         this.meta.updateTag({property:"og:description", content:"LS estruturas solares | Mensagem enviada com Sucesso! Em breve entraremos em contato."})
