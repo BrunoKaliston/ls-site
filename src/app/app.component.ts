@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
         this.meta.updateTag({property:"copyright", content: "LS estruturas solares - 2025"});
         this.meta.updateTag({property:"googlebot", content:"INDEX, FOLLOW"});
         this.meta.updateTag({property:"robots", content:"INDEX, FOLLOW"});
-        this.meta.updateTag({property:"og:image", content:"https://www.lsestruturassolares.aqis.com.br/assets/img/lentreconte-site.avif"})
+        this.meta.updateTag({property:"og:image", content:"https://www.lsestruturassolares.com.br/assets/img/site.avif"})
         this.meta.updateTag({property:"og:image:width", content: '1505'})
         this.meta.updateTag({property:"og:image:height", content: '873'})
         this.meta.updateTag({property:"og:keywords", content:"LS, ls, estruturas solares, placas solares"})

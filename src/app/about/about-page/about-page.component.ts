@@ -12,8 +12,8 @@ export class AboutPageComponent {
         private meta: Meta,
         private title: Title,
     ) {
-        this.meta.updateTag({name:"description", content:"LS estruturas solares | O L’Entrecôte de Paris é um restaurante com prato único. Isto mesmo, apenas um único prato é servido todos os dias, semanas, meses e anos em nossos restaurantes."})
-        this.meta.updateTag({property:"og:description", content:"LS estruturas solares | O L’Entrecôte de Paris é um restaurante com prato único. Isto mesmo, apenas um único prato é servido todos os dias, semanas, meses e anos em nossos restaurantes."})
+        this.meta.updateTag({name:"description", content:"LS estruturas solares | A LS Estruturas Solares nasceu com o propósito de entregar soluções de qualidade no mercado de energia solar, atendendo à crescente demanda por estruturas robustas e eficientes."})
+        this.meta.updateTag({property:"og:description", content:"LS estruturas solares | A LS Estruturas Solares nasceu com o propósito de entregar soluções de qualidade no mercado de energia solar, atendendo à crescente demanda por estruturas robustas e eficientes."})
         this.meta.updateTag({property:"og:title", content:"LS estruturas solares | Quem somos" })
         this.title.setTitle("LS estruturas solares | Quem somos")
     }
