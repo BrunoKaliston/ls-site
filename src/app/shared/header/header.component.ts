@@ -1,6 +1,7 @@
 import {Component, ElementRef, HostListener, Inject, Renderer2, ViewChild} from '@angular/core';
 import {Router} from "@angular/router";
 import {DOCUMENT} from "@angular/common";
+import {WindowRefService} from "../window/window-ref.service";
 
 @Component({
     selector: 'app-header',
@@ -29,7 +30,8 @@ export class HeaderComponent {
         @Inject(DOCUMENT)
         private dom,
         private renderer: Renderer2,
-        private router: Router
+        private router: Router,
+        private WinRef: WindowRefService
     ) {
         this.renderer.listen('window','click',(e:Event) => {
             if (this.isMobilePage()) {
@@ -43,7 +45,7 @@ export class HeaderComponent {
     }
 
     @HostListener('window:resize', ['$event']) onWindowResize() {
-        this.pageIsMobile = window.innerWidth <= 1010;
+        this.pageIsMobile = this.WinRef.nativeWindow.innerWidth <= 1010;
     }
 
     ngOnInit(): void {
@@ -51,7 +53,7 @@ export class HeaderComponent {
             this.setCurrentPageActive(this.router.url);
         }})
         this.setCurrentPageActive(this.router.url);
-        this.pageIsMobile = window.innerWidth <= 960;
+        this.pageIsMobile = this.WinRef.nativeWindow.innerWidth <= 960;
     }
 
     getHeaderClass(): string {

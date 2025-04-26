@@ -44,13 +44,8 @@ export class PhotoSectionComponent implements OnInit {
         {imgSrc: 'assets/img/site/generation-icon-5.avif', externalUrl: 'https://goakira.com.br/cursos-e-treinamentos', title: 'Educação Corporativa', text: 'Treine seu time com a Goakira.',},
     ];
 
-    public caseItemList: object[] = [
-    ];
-
     constructor() {
-        // if (window.innerWidth < 990) {
-            this.carouselOptions.nav = true;
-        // }
+        this.carouselOptions.nav = true;
     }
 
     ngOnInit(): void {}

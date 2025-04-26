@@ -2,6 +2,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 import {Meta} from "@angular/platform-browser";
 import {Router} from "@angular/router";
 import {HeadService} from "./services/head/head.service";
+import {WindowRefService} from "./shared/window/window-ref.service";
 
 @Component({
     selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent implements OnInit{
     constructor(
         private meta: Meta,
         private router: Router,
-        private headService: HeadService
+        private headService: HeadService,
+        private WinRef: WindowRefService
     ) {
         this.meta.updateTag({property:"author", content:"Hexah Digital - https://www.hexah.com.br"});
         this.meta.updateTag({rel:"canonical", content: 'https://lsestruturassolares.com.br'})
@@ -42,9 +44,9 @@ export class AppComponent implements OnInit{
 
     @HostListener('window:scroll', ['$event'])
     WindowScrollEvent(event: KeyboardEvent) {
-        this.scrollY = window.scrollY
+        this.scrollY = this.WinRef.nativeWindow.scrollY
         const fadeList = document.querySelectorAll("[class*=fade]:not(.off),[class*=slide]:not(.off)");
-        const endScreen = window.innerHeight*0.99;
+        const endScreen = this.WinRef.nativeWindow.innerHeight*0.99;
         fadeList.forEach(item => {
             if (item.getBoundingClientRect().top < endScreen && !item.classList.contains('idle')) {
                 item.classList.add('off');
@@ -69,6 +71,6 @@ export class AppComponent implements OnInit{
         return  this.scrollY > 0;
     }
     scrollUp(): void {
-        window.scroll({top: 0, left: 0, behavior: 'smooth'});
+        this.WinRef.nativeWindow.scroll({top: 0, left: 0, behavior: 'smooth'});
     }
 }
