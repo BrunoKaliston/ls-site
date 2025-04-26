@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {Meta, Title} from "@angular/platform-browser";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {ValidService} from "../../services/valid/valid.service";
 import {Router} from "@angular/router";
 

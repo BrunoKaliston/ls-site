@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
-import {HttpClientModule} from "@angular/common/http";
+import { provideHttpClient, withInterceptorsFromDi } from "@angular/common/http";
 
 import {AppComponent} from './app.component';
 import {AboutModule} from "./about/about.module";
@@ -16,12 +16,10 @@ import {SharedModule} from "./shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FormSentModule} from "./form-sent/form-sent.module";
 
-@NgModule({
-    declarations: [
+@NgModule({ declarations: [
         AppComponent,
     ],
-    imports: [
-        BrowserModule,
+    bootstrap: [AppComponent], imports: [BrowserModule,
         BrowserAnimationsModule,
         AppRoutingModule,
         AboutModule,
@@ -33,11 +31,6 @@ import {FormSentModule} from "./form-sent/form-sent.module";
         PrivacityModule,
         QuoteModule,
         SharedModule,
-        HttpClientModule,
-        AngularSvgIconModule.forRoot()
-    ],
-    providers: [provideClientHydration()],
-    bootstrap: [AppComponent]
-})
+        AngularSvgIconModule.forRoot()], providers: [provideClientHydration(), provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {
 }
