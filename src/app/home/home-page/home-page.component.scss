@@ -29,7 +29,7 @@
 .project-section{padding: 120px 0;}
 
 .video-section{padding: 64px 0;
-    .video-box{position: relative;max-width: 800px;margin: 0 auto;aspect-ratio: 16/8;z-index: 10;
+    .video-box{position: relative;max-width: 800px;height:400px;margin: 0 auto;z-index: 10;
         iframe{width: 100%;max-height: 100%;}
     }
 }
@@ -48,5 +48,10 @@
             .content{text-align: center;margin: 0 auto;}
         }
     }
+}
+
+@media (max-width: 680px) {
+    .flex-desk{display: block}
+    .video-section .video-box{margin: 20px 20px 40px;}
 }
 
