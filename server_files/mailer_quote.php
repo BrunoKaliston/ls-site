@@ -51,7 +51,6 @@ try {
     $mail->SMTPSecure = 'tls';// Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port = 587;        // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 //    $mail->SMTPDebug = 2;
-//    $mail->IsSendmail();
 
     $mail->From = 'email@aqis.com.br';
     $mail->FromName = 'LS ESTRUTURAS - ORÇAMENTO SITE';
