@@ -255,6 +255,7 @@ select{background: var(--cl-wt) url("assets/svg-icons/arrow/jf-caret-down-sm.svg
     .container{margin: 0 var(--spc-2);}
 }
 @media (max-width: 400px) {
+    [class*="df-btn"]{white-space: normal;height: auto;}
     app-svg{
         svg{max-width: 100%;}
     }

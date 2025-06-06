@@ -25,3 +25,7 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+    .product-section .content.g2{display: grid;grid-template-columns: repeat(auto-fill, 100%);}
+}
