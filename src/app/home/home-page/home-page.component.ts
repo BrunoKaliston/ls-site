@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
@@ -6,7 +6,13 @@ import {Meta, Title} from "@angular/platform-browser";
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
 })
-export class HomePageComponent {
+export class HomePageComponent{
+
+    public videoLoaded = false;
+
+    onVideoLoaded() {
+        this.videoLoaded = true;
+    }
 
     constructor(
         private meta: Meta,
@@ -17,4 +23,5 @@ export class HomePageComponent {
         this.meta.updateTag({property:"og:title", content:"LS estruturas solares | Uma solução completa e confiável"})
         this.title.setTitle("LS estruturas solares | Uma solução completa e confiável")
     }
+
 }

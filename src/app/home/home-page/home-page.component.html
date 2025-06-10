@@ -1,14 +1,9 @@
 <div class="hero-section">
     <div class="video-box txt-center">
         <div class="frame-box">
-            <iframe
-                src="https://www.youtube.com/embed/udmkD2MQ9Bk?autoplay=1&mute=1&loop=1&playlist=udmkD2MQ9Bk&playsinline=1&controls=0"
-                title="Estruturas solares de qualidade"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
+            <video (loadeddata)="onVideoLoaded()" [style.display]="videoLoaded ? 'block' : 'none'" autoplay muted loop>
+                <source [src]="'https://lsestruturassolares.com.br/video/ls-site-opt.mp4'" type="video/mp4">
+            </video>
         </div>
     </div>
     <div class="container">
